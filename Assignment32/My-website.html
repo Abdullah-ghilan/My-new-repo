@@ -1,58 +1,68 @@
 <!DOCTYPE html>
 <html lang="en-us">
+
 <head>
     <meta charset="UTF-8">
     <title>save Budget</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" type="text/css" href="https://raw.githubusercontent.com/Abdullah-ghilan/My-new-repo/main/Assignment32/styles/style.css">
-    <link rel="icon" type="image/png" href="https://raw.githubusercontent.com/Abdullah-ghilan/My-new-repo/main/Assignment32/img/favicon-Hamburger.png">
+
+    <!-- Google Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
 
 
+    <!--link rel="stylesheet" type="text/css" href="https://raw.githubusercontent.com/Abdullah-ghilan/My-new-repo/main/Assignment32/styles/style.css"
+      CORS problem??? -->
 
+    <link rel="stylesheet" type="text/css" href="styles/style.css">
+    <link rel="icon" type="image/png"
+        href="https://raw.githubusercontent.com/Abdullah-ghilan/My-new-repo/main/Assignment32/img/favicon-Hamburger.png">
 
 </head>
 
 
 
 <body>
-   <header>
+    <header id="main-header">
+        <h1>Best Meals Within Your Budget</h1>
+    </header>
 
-    <h1>Best Meals Within Your Budget</h1>
-    <nav>
+    <nav id="navbar">
         <ul>
             <li><a href="Browse-Restaurants.html">Browse Restaurants</a></li>
             <li><a href="Reviews.html">Reviews</a></li>
             <li><a href="top-picks.html">Top picks</a></li>
             <li><a href="About.html">About</a></li>
             <li><a href="contact.html">contact</a></li>
-        </ul>        
+        </ul>
     </nav>
 
-   </header> 
+    <section id="showcase">
+       <h2> “Find the Best Meals Within Your Budget / Anytime, Anywhere.”</h2>
+        <p class="container"><strong> set your budget</strong>
+            and discover the top-rated meals near you , from pizza to burgers to Asian cuisine.</h2>
 
-    <p class="intro"><strong> your budget, pick your craving, </strong>  and discover the top-rated meals near you , from pizza to burgers to Asian cuisine.</p>
 
-    <a href="https://i.ebayimg.com/images/g/WxIAAOSwPKxgz6E4/s-l1600.webp" class="center-link">Dont you know what 'food' mean ? click here</a> 
+    </section>
 
-<section>
-    <article>   
 
-    <figure class="figure">
-        <img src="img/food1.jpg" alt="food image" title= "i'm Hungry ahh" class="center-img">
-    <figcaption>EetsMakelijk</figcaption>
-    </figure>
-    <p>Finding the best meals within your budget doesn’t mean sacrificing flavor. Many restaurants offer affordable dishes that are both delicious and satisfying.</p>
 
-    </article>
-    
+    <section class="container">
+        <section id="main">
+            <h3>just trying for now</h3>
+            <p> <em>Eating out can be expensive, but with a little planning, you can enjoy delicious meals without
+                    breaking the bank.</em></p>
+        </section>
 
-    <aside>
-        <h3>Did you know ?</h3>
-        <p> <em>Eating out can be expensive, but with a little planning, you can enjoy delicious meals without breaking the bank.</em></p>
-    </aside>
 
-</section>
-    
+        <aside id="sidebar">
+            <p> <em>Eating out can be expensive, but with a little planning, you can enjoy delicious meals without
+                    breaking the bank.</em></p>
+        </aside>
+    </section>
+
     <p> what is the food you like the most ??</p>
     <ul class="ul">
         <li>Pizza</li>
@@ -64,13 +74,48 @@
         <li>French Food??!! Come on! are u serious ??</li>
     </ul>
 
-<footer>
-    &copy;All Rights Reserved 2001.
-</footer>
+    <article>
+
+        <figure class="figure">
+            <img src="img/food1.jpg" alt="food image" title="i'm Hungry ahh" class="center-img">
+            <figcaption>EetsMakelijk</figcaption>
+        </figure>
+        <p>Finding the best meals within your budget doesn’t mean sacrificing flavor.</p>
+
+    </article>
+
+
+
+
+
+    <section>
+        <h2>Sign up for our newsletter</h2>
+        <form action="submit.php" method="post">
+            <fieldset>
+                <legend>Subscribe for recommendations</legend>
+
+                <label for="username">Username:</label>
+                <input type="text" id="username" name="username" placeholder="like ur name" required>
+
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" placeholder="you@gmail.com" required>
+
+                <label for="Cuisine">Cuisine</label>
+                <input type="button">
+
+                <input type="submit" value="sign up">
+            </fieldset>
+        </form>
+    </section>
+
+    <footer id="main-footer">
+        &copy;All Rights Reserved 2001.
+    </footer>
 
 
 
 
 
 </body>
+
 </html>
