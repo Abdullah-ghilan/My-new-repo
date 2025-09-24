@@ -4,7 +4,8 @@
         background-color: #f4f4f4;
         line-height: 1.6em;
         margin: 0;
-    } 
+
+    }
 
     .container {
         width: 80%;
@@ -20,51 +21,77 @@
         word-spacing: 0.5em;
         text-transform: uppercase;
         text-align: center;
+        position: relative;
     }
 
 
     #navbar {
+
         background-color: #313728;
         color: white;
         
+
+
     }
 
     #navbar ul {
         list-style-type: none;
-    
-        padding: 15px ;
-        text-align: center;    
+
+        padding: 15px;
+        text-align: center;
         /*overflow: hidden;*/
+        transition: 0.3s;
     }
 
     #navbar li {
         display: inline;
-        margin:  20px;
+        margin: 20px;
     }
 
     #navbar a {
         text-decoration: none;
-        color: white    ;
+        color: white;
         font-size: 20px;
         font-weight: bold;
     }
 
-    #showcase { 
-    background-image:url('../img/menu.jpg');; 
-    background-position: center right;
-    min-height: 300px;
-        margin-bottom: 30px;
-    text-align: center;
-    
-    /*align-items: center;*/
+
+    #navbar>ul>li>a {
+        padding: 7px 20px;
+        border-radius: 5px;
     }
-    
+
+    #navbar a:active {
+        background-color: #000000;
+    }
+
+    #navbar a:hover {
+        color: #cfe8a9;
+        background-color: #444;
+
+    }
+
+
+    #showcase {
+        background-image: url('../img/menu.jpg');
+        ;
+        background-position: center right;
+        min-height: 300px;
+        margin-bottom: 30px;
+        text-align: center;
+
+
+        /*align-items: center;*/
+    }
+
     #showcase h2 {
         color: rgb(255, 255, 255);
         font-size: 50px;
         line-height: 1.6em;
         padding-top: 30px;
         text-shadow: #333 3px 3px 5px;
+
+
     }
 
     #showcase p {
@@ -77,76 +104,154 @@
         float: left;
         width: 70%;
         padding: 0 30px;
-        box-sizing: border-box ;
+        box-sizing: border-box;
+    }
+
+    #main p::first-letter {
+        font-size: 150%;
+        color: #313728;
+        font-weight: bold;
+
     }
 
     #aside {
         float: right;
         width: 30%;
         background: #333;
-        color: #fff ;
+        color: #fff;
         padding: 10px;
         box-sizing: border-box;
-        }
+
+    }
+
+
+
+    /* nth-child*/
+    .prices {
+        border-collapse: collapse;
+        width: 60%;
+        margin: 20px auto;
+        text-align: center;
+        font-size: 18px;
+    }
+
+    .prices th,
+    .prices td {
+        border: 1px solid #ddd;
+        padding: 8px;
+    }
+
+    .prices th {
+        background-color: #313728;
+        color: white;
+        text-transform: uppercase;
+    }
+
+    /* odd rows white */
+    .prices tr:nth-child(odd) {
+        background: #FFF;
+    }
+
+    /* even rows light blue */
+    .prices tr:nth-child(even) {
+        background: #CFF;
+    }
+
+    /*end of nth-child*/
 
 
 
 
 
 
+    /* insta button */
+    #instagram-button {
+        position: fixed;
+        bottom: 20px;
+        right: 20px;
+        width: 50px;
+        height: 50px;
+        z-index: 2000;
+    }
+
+    #instagram-button img {
+        width: 100%;
+        height: auto;
+        border-radius: 50%;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+        transition: transform 0.3s;
+    }
+
+    #instagram-button img:hover {
+        transform: scale(1.1);
+        /* تكبر شوي عند المرور */
+    }
+
+    /* End of insta button */
 
 
     /* Classes for img */
-        .center-img{
+    .center-img {
         display: block;
-            margin-left: auto;
-            margin-right: auto;
-            width: 250px;
-            height:auto;
-            }
+        margin-left: auto;
+        margin-right: auto;
+        width: 250px;
+        height: auto;
+    }
 
-        .left-img{
+    .left-img {
         float: left;
         width: auto;
         height: auto;
-        }
+    }
+
+    /* end of Classes for img */
 
     /* Classes for figure and figcaption */
     .figure {
-     text-align: center;     /* centers the caption text */
-     margin: 20px auto;      /* centers the whole figure block */
-     width: fit-content;
-    
-     }
+        text-align: center;
+        /* centers the caption text */
+        margin: 20px auto;
+        /* centers the whole figure block */
+        width: fit-content;
+        border-color: #333;
+        border-style: solid;
+        border-width: 2px;
+
+    }
 
     .figure figcaption {
         font-size: 18px;
-     font-style: italic;
-     margin-top: 10px;
-        }
-    
+        font-style: italic;
+        margin-top: 10px;
+    }
+
+    /*  end of Classes for figure and figcaption */
+
     #main-footer {
         background-color: #333;
         color: #fff;
         text-align: center;
         padding: 20px;
         margin-top: 40px;
+    }
+
+
+
+
+
+
+
+
+    @media(max-width: 600px) {
+
+        #main,
+        #aside {
+            width: 100%;
+            float: none;
         }
 
-
-
-
-
-
-
-
-@media(max-width: 600px) {
-    #main, #aside {
-        width: 100%;
-        float: none;
+        #showcase h2 {
+            font-size: 30px;
+        }
     }
-
-    #showcase h2 {
-        font-size: 30px;
-    }
-}
