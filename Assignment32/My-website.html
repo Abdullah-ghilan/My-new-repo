@@ -13,9 +13,6 @@
         rel="stylesheet">
 
 
-    <!--link rel="stylesheet" type="text/css" href="https://raw.githubusercontent.com/Abdullah-ghilan/My-new-repo/main/Assignment32/styles/style.css"
-      CORS problem??? -->
-
     <link rel="stylesheet" type="text/css" href="styles/style.css">
     <link rel="icon" type="image/png"
         href="https://raw.githubusercontent.com/Abdullah-ghilan/My-new-repo/main/Assignment32/img/favicon-Hamburger.png">
@@ -42,24 +39,74 @@
     <section id="showcase">
         <h2> “Find the Best Meals Within Your Budget / Anytime, Anywhere.”</h2>
         <p class="container"><strong> set your budget</strong>
-            and discover the top-rated meals near you , from pizza to burgers to Asian cuisine.</h2>
+            and discover the top-rated meals near you , from pizza to burgers to Asian cuisine.</p>
 
+        <!-- search form -->
+        <form class="search-form">
+
+            <!-- Budget -->
+            <select name="budget" required>
+                <option value="">Select Budget</option>
+                <option value="5-10">$5 - $10</option>
+                <option value="10-15">$10 - $15</option>
+                <option value="15-20">$15 - $20</option>
+                <option value="20-25">$20 - $25</option>
+                <option value="25-30">$25 - $30</option>
+            </select>
+
+            <!-- Cuisine Type -->
+            <select name="cuisine" required>
+                <option value="">Select Cuisine</option>
+                <option value="italian">Italian</option>
+                <option value="mexican">Mexican</option>
+                <option value="asian">Asian</option>
+                <option value="middle-eastern">Middle Eastern</option>
+            </select>
+
+            <!-- Location -->
+            <select name="location" required>
+                <option value="">Select Location</option>
+                <option value="Amsterdam">Amsterdam</option>
+                <option value="denhaag">Den Haag</option>
+                <option value="haarlem">Haarlem</option>
+                <option value="rotterdam">Rotterdam</option>
+                <option value="utrecht">Utrecht</option>
+                <option value="zandvoort">Zandvoort</option>
+            </select>
+
+            <button type="submit">Search</button>
+        </form>
+        <!-- end of search form -->
 
     </section>
 
 
 
     <section class="container">
-        <section id="main">
+        <section class="LeftSection">
             <h3>just trying for now</h3>
             <p> <em>Eating out can be expensive, but with a little planning, you can enjoy delicious meals without
                     breaking the bank.</em></p>
         </section>
 
 
-        <aside id="sidebar">
+        <aside class="Rightaside">
+            <img src="img/food1.jpg" alt="sidePhoto" class="RightSidePhoto">
+        </aside>
+    </section>
+
+    <hr class="divider">
+
+    <section class="container">
+        <section class="RightSection">
+            <h3>just trying for now</h3>
             <p> <em>Eating out can be expensive, but with a little planning, you can enjoy delicious meals without
                     breaking the bank.</em></p>
+        </section>
+
+
+        <aside class="Leftaside">
+            <img src="img/food1.jpg" alt="sidePhoto" class="LeftSidePhoto">
         </aside>
     </section>
 
@@ -102,7 +149,7 @@
             <td>from $10</td>
         </tr>
         <tr>
-            <td>Midlle Eastern</td>
+            <td>Middle Eastern</td>
             <td>from $8</td>
         </tr>
     </table>
@@ -135,11 +182,10 @@
 
 
     <a href="https://www.instagram.com/" target="_blank" id="instagram-button">
-        <img src="img/instagram-logo.png.webp" alt="instagram" >
+        <img src="img/instagram-logo.png.webp" alt="instagram">
 
     </a>
 
-    </a>
     <footer id="main-footer">
         &copy;All Rights Reserved 2001.
     </footer>

@@ -29,7 +29,7 @@
 
         background-color: #313728;
         color: white;
-        
+
 
 
     }
@@ -100,29 +100,106 @@
         text-shadow: #333 3px 3px 5px;
     }
 
-    #main {
+    /* Search Form Styles */
+    .search-form {
+        margin-top: 30px;
+        /* مسافة من فوق */
+        display: flex;
+        /* نخلي العناصر جواته تتحط في خط واحد */
+        justify-content: center;
+        /* نخليهم يتوسّطوا (بالعرض) */
+        gap: 10px;
+        /* فراغ بين العناصر */
+        flex-wrap: wrap;
+        /* لو الشاشة صغيرة، العناصر تنزل تحت بعض */
+    }
+
+    .search-form select,
+    .search-form button {
+        padding: 10px 15px;
+        /* حشوة داخلية: تخلي العنصر أكبر وأسهل للضغط */
+        font-size: 16px;
+        /* حجم الخط */
+        border: none;
+        /* نشيل الحدود الافتراضية */
+        border-radius: 5px;
+        /* زوايا مدوّرة */
+    }
+
+    .search-form select {
+        background: #fff;
+        /* الخلفية بيضاء */
+        min-width: 160px;
+        /* أقل عرض للقائمة 160px */
+    }
+
+    .search-form button {
+        background-color: #313728;
+        /* لون الخلفية غامق (أخضر زيتوني/أسود مائل) */
+        color: #fff;
+        /* الخط أبيض */
+        font-weight: bold;
+        /* خط غامق */
+        cursor: pointer;
+        /* المؤشر يتحول ليد عند المرور */
+        transition: 0.3s;
+        /* حركة ناعمة عند التغيير */
+    }
+
+    #search-form button:hover {
+        background-color: #444;
+        /* يغيّر اللون لو مرّرت الماوس عليه */
+    }
+    /* End of Search Form Styles */
+
+
+
+    .LeftSection {
         float: left;
         width: 70%;
         padding: 0 30px;
         box-sizing: border-box;
     }
 
-    #main p::first-letter {
+    .RightSection {
+        float: right;
+        width: 70%;
+        padding: 0 30px;
+        box-sizing: border-box;
+    }
+
+    .LeftSection p::first-letter,
+    .RightSection p::first-letter {
         font-size: 150%;
         color: #313728;
         font-weight: bold;
 
     }
 
-    #aside {
+    .Rightaside {
         float: right;
         width: 30%;
         background: #333;
         color: #fff;
         padding: 10px;
         box-sizing: border-box;
+        background: none;
+        padding: 0;
 
     }
+
+    .Leftaside {
+        float: left;
+        width: 30%;
+        background: #333;
+        color: #fff;
+        padding: 10px;
+        box-sizing: border-box;
+        background: none;
+        padding: 0;
+
+    }
+
 
 
 
@@ -191,6 +268,19 @@
 
 
     /* Classes for img */
+    .RightSidePhoto,
+    .LeftSidePhoto {
+        display: block;
+        width: 100%;
+        height: auto;
+        border-radius: 10px;
+        object-fit: cover;
+    }
+
+
+
+
+
     .center-img {
         display: block;
         margin-left: auto;
@@ -228,6 +318,7 @@
 
     /*  end of Classes for figure and figcaption */
 
+
     #main-footer {
         background-color: #333;
         color: #fff;
@@ -237,6 +328,12 @@
     }
 
 
+    hr.divider {
+        border: 0;
+        height: 1px;
+        background: #333;
+        margin: 40px 0;
+    }
 
 
 
