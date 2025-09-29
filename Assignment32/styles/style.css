@@ -89,7 +89,7 @@
         font-size: 50px;
         line-height: 1.6em;
         padding-top: 30px;
-        text-shadow: #333 3px 3px 5px;
+        text-shadow: #333 5px 5px 7px;
 
 
     }
@@ -97,7 +97,7 @@
     #showcase p {
         color: rgb(255, 255, 255);
         font-size: 20px;
-        text-shadow: #333 3px 3px 5px;
+        text-shadow: #333 5px 5px 7px;
     }
 
     /* Search Form Styles */
@@ -185,6 +185,7 @@
         box-sizing: border-box;
         background: none;
         padding: 0;
+        
 
     }
 
@@ -271,10 +272,13 @@
     .RightSidePhoto,
     .LeftSidePhoto {
         display: block;
-        width: 100%;
+        width: 50%;
         height: auto;
         border-radius: 10px;
         object-fit: cover;
+        border-color: #333;
+        border-style: solid;
+        border-width: 2px;
     }
 
 
