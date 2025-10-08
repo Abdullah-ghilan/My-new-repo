@@ -26,6 +26,28 @@
         <h1>Best Meals Within Your Budget</h1>
     </header>
 
+
+    <!-- زر الهامبرغر -->
+    <input type="checkbox" id="menu-toggle">
+    <label for="menu-toggle" class="hamburger">
+        <span></span>
+        <span></span>
+        <span></span>
+    </label>
+
+    <!--  حقت البرقر القائمة -->
+    <nav class="menu">
+        <ul>
+            <li><a href="Browse-Restaurants.html">Browse Restaurants</a></li>
+            <li><a href="Reviews.html">Reviews</a></li>
+            <li><a href="top-picks.html">Top picks</a></li>
+            <li><a href="About.html">About</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+    </nav>
+
+
+
     <nav id="navbar">
         <ul>
             <li><a href="Browse-Restaurants.html">Browse Restaurants</a></li>
@@ -41,20 +63,20 @@
         <p class="container"><strong> set your budget</strong>
             and discover the top-rated meals near you , from pizza to burgers to Asian cuisine.</p>
 
-        <!-- search form -->
+        <!--search form -->
         <form class="search-form">
 
-            <!-- Budget -->
+            <!--Budget -->
             <select name="budget">
                 <option value="">Select Budget</option>
-                <option value="5-10">$5 - $10</option>
-                <option value="10-15">$10 - $15</option>
-                <option value="15-20">$15 - $20</option>
-                <option value="20-25">$20 - $25</option>
-                <option value="25-30">$25 - $30</option>
+                <option value="5-10">&dollar;5 - &dollar;10</option>
+                <option value="10-15">&dollar;10 - &dollar;15</option>
+                <option value="15-20">&dollar;15 - &dollar;20</option>
+                <option value="20-25">&dollar;20 - &dollar;25</option>
+                <option value="25-30">&dollar;25 - &dollar;30</option>
             </select>
 
-            <!-- Cuisine Type -->
+            <!--Cuisine Type -->
             <select name="select type">
                 <option value="">Select type</option>
                 <option value="italian">Italian</option>
@@ -68,7 +90,7 @@
 
             </select>
 
-            <!-- Location -->
+            <!--Location -->
             <select name="location">
                 <option value="">Select Location</option>
                 <option value="Amsterdam">Amsterdam</option>
@@ -81,7 +103,7 @@
 
             <button type="submit">Search</button>
         </form>
-        <!-- end of search form -->
+        <!--end of search form -->
 
     </section>
 
@@ -98,7 +120,7 @@
 
 
         <aside class="Rightaside">
-            <img src="img/food1.jpg" alt="sidePhoto" class="RightSidePhoto">
+            <img src="img/food1.jpg" alt="sidePhoto" class="RightSidePhoto" title="i'm Hungry ahh">
         </aside>
     </section>
 
@@ -113,7 +135,7 @@
 
 
         <aside class="Leftaside">
-            <img src="img/food1.jpg" alt="sidePhoto" class="LeftSidePhoto">
+            <img src="img/food1.jpg" alt="sidePhoto" class="LeftSidePhoto" title="i'm Hungry ahh">
         </aside>
     </section>
 
@@ -126,19 +148,19 @@
         </tr>
         <tr>
             <td>Italian</td>
-            <td>from $15</td>
+            <td>from &dollar;15</td>
         </tr>
         <tr>
             <td>Mexican</td>
-            <td>from $6</td>
+            <td>from &dollar;6</td>
         </tr>
         <tr>
             <td>Asian</td>
-            <td>from $10</td>
+            <td>from &dollar;10</td>
         </tr>
         <tr>
             <td>Middle Eastern</td>
-            <td>from $8</td>
+            <td>from &dollar;8</td>
         </tr>
     </table>
 
@@ -162,7 +184,7 @@
             <img src="img/food1.jpg" alt="food image" title="i'm Hungry ahh" class="center-img">
             <figcaption>EetsMakelijk</figcaption>
         </figure>
-        <p>Finding the best meals within your budget doesn’t mean sacrificing flavor.</p>
+        <p>Finding the best meals within your budget doesn't mean sacrificing flavor.</p>
 
     </article>
 
@@ -184,10 +206,14 @@
                 <label for="email">Email:</label>
                 <input type="email" id="email" name="email" placeholder="you@gmail.com" required>
 
-                <label for="Cuisine">Cuisine</label>
-                <input type="button">
-
-                <input type="submit" value="sign up">
+                <label for="cuisine">Cuisine</label>
+                    <select id="cuisine" name="cuisine">
+                        <option value="">Choose cuisine</option>
+                        <option value="italian">Italian</option>
+                        <option value="mexican">Mexican</option>
+                      
+                    </select>
+                    <input type="submit" value="sign up">
             </fieldset>
         </form>
     </section>
@@ -196,9 +222,12 @@
 
 
     <a href="https://www.instagram.com/" target="_blank" id="instagram-button">
-        <img src="img/instagram-logo.png.webp" alt="instagram">
+        <img src="img/instagram-logo.png.webp" alt="instagram" title="instagram">
 
     </a>
+
+
+
 
     <footer id="main-footer">
         &copy;All Rights Reserved 2001.
