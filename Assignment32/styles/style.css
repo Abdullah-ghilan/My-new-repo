@@ -7,11 +7,7 @@
 
     }
 
-    .container {
-        width: 80%;
-        margin: auto;
-        overflow: hidden;
-    }
+
 
     #main-header {
         background-color: rgb(139, 139, 124);
@@ -23,6 +19,12 @@
         text-align: center;
         position: relative;
     }
+
+    #main-header h1 {
+        margin: 0;
+        padding: 16px 0;
+    }
+
 
 
     #navbar {
@@ -100,61 +102,10 @@
         text-shadow: #333 5px 5px 7px;
     }
 
-    /* Search Form Styles */
-    .search-form {
-        margin-top: 30px;
-        /* مسافة من فوق */
-        display: flex;
-        /* نخلي العناصر جواته تتحط في خط واحد */
-        justify-content: center;
-        /* نخليهم يتوسّطوا (بالعرض) */
-        gap: 10px;
-        /* فراغ بين العناصر */
-        flex-wrap: wrap;
-        /* لو الشاشة صغيرة، العناصر تنزل تحت بعض */
-    }
-
-    .search-form select,
-    .search-form button {
-        padding: 10px 15px;
-        /* حشوة داخلية: تخلي العنصر أكبر وأسهل للضغط */
-        font-size: 16px;
-        /* حجم الخط */
-        border: none;
-        /* نشيل الحدود الافتراضية */
-        border-radius: 5px;
-        /* زوايا مدوّرة */
-    }
-
-    .search-form select {
-        background: #fff;
-        /* الخلفية بيضاء */
-        min-width: 160px;
-        /* أقل عرض للقائمة 160px */
-    }
-
-    .search-form button {
-        background-color: #313728;
-        /* لون الخلفية غامق (أخضر زيتوني/أسود مائل) */
-        color: #fff;
-        /* الخط أبيض */
-        font-weight: bold;
-        /* خط غامق */
-        cursor: pointer;
-        /* المؤشر يتحول ليد عند المرور */
-        transition: 0.3s;
-        /* حركة ناعمة عند التغيير */
-    }
-
-    .search-form button:hover {
-        background-color: #444;
-        /* يغيّر اللون لو مرّرت الماوس عليه */
-    }
-    /* End of Search Form Styles */
+    
 
 
-
-    .LeftSection {
+    /*.LeftSection {
         float: left;
         width: 70%;
         padding: 0 30px;
@@ -166,17 +117,11 @@
         width: 70%;
         padding: 0 30px;
         box-sizing: border-box;
-    }
+    }*/
 
-    .LeftSection p::first-letter,
-    .RightSection p::first-letter {
-        font-size: 150%;
-        color: #313728;
-        font-weight: bold;
 
-    }
 
-    .Rightaside {
+    /*.Rightaside {
         float: right;
         width: 30%;
         background: #333;
@@ -199,7 +144,72 @@
         background: none;
         padding: 0;
 
+    }*/
+
+    .LeftSection p::first-letter,
+    .RightSection p::first-letter {
+        font-size: 150%;
+        color: #313728;
+        font-weight: bold;
+
     }
+
+    .container {
+        width: 80%;
+        margin: auto;
+        overflow: hidden;
+    }
+
+    /* new Grids */
+
+    /* container عادية */
+    .container {
+        width: 80%;
+        margin: auto;
+        overflow: hidden;
+    }
+
+    /* Grid فقط لما نضيف split */
+    .container.split {
+        display: grid;
+        grid-template-columns: 70% 30%;
+        align-items: start;
+    }
+
+    /* قلب الأعمدة بإضافة reverse */
+    .container.split-reverse {
+        grid-template-columns: 30% 70%;
+    }
+
+    /* حواف داخلية لعناصر العمودين */
+    .container.split>section,
+    .container.split>aside {
+        padding: 0 40px;
+        box-sizing: border-box;
+    }
+
+    /* موبايل: عمود واحد */
+    @media (max-width: 768px) {
+
+        .container.split,
+        .container.split.reverse {
+            grid-template-columns: 1fr;
+        }
+    }
+
+    /* end of new Grids */
+
+
+article {
+  display: grid;
+  justify-items: center;
+  align-items: center;
+  gap: 10px;
+  margin: 20px auto;
+  text-align: center;
+}
+
+
 
 
 
@@ -208,37 +218,232 @@
     .prices {
         border-collapse: collapse;
         width: 60%;
-        margin: 20px auto;
+        margin: 40px auto;
         text-align: center;
         font-size: 18px;
-    }
-
-    .prices th,
-    .prices td {
-        border: 1px solid #ddd;
-        padding: 8px;
+        border-radius: 10px;
+        overflow: hidden;
+        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
     }
 
     .prices th {
-        background-color: #313728;
-        color: white;
+        background-color: #444;
+        color: #cfe8a9;
         text-transform: uppercase;
+        padding: 12px;
     }
 
-    /* odd rows white */
+    .prices td {
+        padding: 10px;
+        color: #333;
+    }
+
+    /* odd rows  */
     .prices tr:nth-child(odd) {
         background: #FFF;
     }
 
-    /* even rows light blue */
+    /* even rows */
     .prices tr:nth-child(even) {
-        background: #CFF;
+        background: #cff;
+    }
+
+    .prices tr:hover {
+        background-color: #eaeae0;
     }
 
     /*end of nth-child*/
 
+/* قسم "What is the food you like */
+.food-list-container {
+  display: grid;
+  grid-template-columns: 30% 70%;
+  align-items: start;
+  gap: 20px;
+  background: #fafaf5;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  padding: 20px;
+  box-shadow: 0 1px 6px rgba(0, 0, 0, 0.1);
+  margin: 40px auto;
+  width: 80%;
+}
+
+.food-list-container p {
+  text-align: right;
+  font-weight: bold;
+  color: #313728;
+  font-size: 20px;
+}
+
+.food-list-container .ul {
+  list-style-type: square;
+  margin: 0;
+  padding-left: 20px;
+}
 
 
+
+
+
+
+section form {
+  display: grid;
+  grid-template-rows: auto 1fr;
+  justify-items: center;
+  background: #f8f8f5;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  padding: 25px 30px;
+  width: 70%;
+  margin: 40px auto;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+    section form fieldset {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  gap: 15px 20px;
+  width: 100%;
+  border: none;
+}
+section form legend {
+  grid-column: 1 / -1;
+  text-align: center;
+  font-size: 1.3em;
+  font-weight: bold;
+  color: #313728;
+  margin-bottom: 15px;
+}
+section form label {
+  color: #313728;
+  font-weight: 500;
+}
+
+section form input[type="text"],
+section form input[type="email"],
+section form select {
+  width: 100%;
+  padding: 10px;
+  border-radius: 6px;
+  border: 1px solid #aaa;
+  font-size: 16px;
+  box-sizing: border-box;
+}
+
+section form input[type="submit"] {
+  grid-column: 1 / -1;
+  justify-self: center;
+  background: #313728;
+  color: #fff;
+  font-weight: bold;
+  border: none;
+  border-radius: 5px;
+  padding: 10px 25px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+section form input[type="submit"]:hover {
+  background: #444;
+}
+
+
+
+/* Search Form Styles */
+  /* Search Form Styles (grid version) */
+form.search-main {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr); /* 4 أعمدة: 3 قوائم + زر */
+  gap: 10px;
+  align-items: center;
+  justify-items: center;
+  width: 80%;
+  margin: 30px auto;
+  background: rgba(255, 255, 255, 0.1);
+  border: none;
+  box-shadow: none;
+  padding: 10px;
+}
+
+form.search-main select,
+form.search-main button {
+  width: 100%;
+  padding: 10px 15px;
+  font-size: 16px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  box-sizing: border-box;
+}
+
+form.search-main select {
+  background: #fff;
+}
+
+form.search-main button {
+  background-color: #313728;
+  color: #fff;
+  font-weight: bold;
+  cursor: pointer;
+  border: none;
+}
+
+form.search-main button:hover {
+  background-color: #444;
+}
+
+/* responsive — الجوال يخليها بالطول */
+@media (max-width: 768px) {
+  form.search-main {
+    grid-template-columns: 1fr;
+  }
+}
+
+    /* End of Search Form Styles */
+
+    form.contact-form {
+  display: grid;
+  gap: 15px;
+  background: #fafaf5;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  padding: 30px;
+  width: 60%;
+  margin: 40px auto;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+form.contact-form label {
+  font-weight: bold;
+  color: #313728;
+}
+
+form.contact-form input,
+form.contact-form textarea {
+  width: 100%;
+  padding: 10px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  font-size: 16px;
+  box-sizing: border-box;
+}
+
+form.contact-form button {
+  background-color: #313728;
+  color: #fff;
+  font-weight: bold;
+  border: none;
+  border-radius: 5px;
+  padding: 10px 25px;
+  cursor: pointer;
+}
+
+form.contact-form button:hover {
+  background-color: #444;
+}
+
+
+
+  
 
 
 
@@ -268,11 +473,14 @@
     /* End of insta button */
 
 
+
+
+
     /* Classes for img */
     .RightSidePhoto,
     .LeftSidePhoto {
         display: block;
-        width: 50%;
+        width: 100%;
         height: auto;
         border-radius: 10px;
         object-fit: cover;
@@ -360,85 +568,132 @@
 
 
     /* اخفاء الـ checkbox */
-#menu-toggle {
-  display: none;
+    #menu-toggle {
+        display: none;
+    }
+
+    /* شكل زر الهامبرغر */
+    .hamburger {
+        position: relative;
+        display: inline-block;
+        width: 30px;
+        height: 20px;
+        cursor: pointer;
+        margin: 15px;
+        z-index: 1001;
+    }
+
+    .hamburger span {
+        position: absolute;
+        left: 0;
+        right: 0;
+        height: 3px;
+        background-color: #000;
+        /* لون الخطوط */
+    }
+
+    .hamburger span:nth-child(1) {
+        top: 0;
+    }
+
+    .hamburger span:nth-child(2) {
+        top: 9px;
+    }
+
+    .hamburger span:nth-child(3) {
+        bottom: 0;
+    }
+
+    /* ستايل القائمة */
+    .menu {
+        position: absolute;
+        top: 0;
+        right: -300px;
+        /* مخفية باليمين */
+        width: 300px;
+        height: 100%;
+        background-color: #313728;
+        color: #fff;
+        transition: right 0.3s ease;
+        z-index: 1000;
+    }
+
+    .menu ul {
+        list-style-type: none;
+        padding: 0;
+        margin: 0;
+    }
+
+    .menu li {
+        padding: 12px;
+    }
+
+    .menu li a {
+        color: #fff;
+        text-decoration: none;
+        ;
+    }
+
+    /* اظهار القائمة لما يكون الشيكبوكس مفعل */
+    #menu-toggle:checked~.menu {
+        right: 0;
+    }
+
+    /* للشاشات الكبيرة: نرجع القائمة أفقية */
+    @media (min-width: 768px) {
+        .hamburger {
+            display: none;
+        }
+
+        .menu {
+            position: static;
+            width: auto;
+            height: auto;
+            background: transparent;
+            right: auto;
+            transition: none;
+        }
+
+        .menu ul {
+            display: flex;
+            justify-content: center;
+            margin: 0;
+        }
+
+        .menu li {
+            padding: 0 15px;
+        }
+
+        .menu li a {
+            color: #fff;
+            font-weight: bold;
+        }
+    }
+
+
+    #cookies-banner {
+  position: fixed;
+  left: 0; right: 0; bottom: 0;
+  background: #313728;
+  color: #fff;
+  display: grid;
+  grid-template-columns: 1fr auto;
+  gap: .5rem;
+  align-items: center;
+  padding: .75rem 1rem;
+  z-index: 9999;
+  transition: transform 0.3s ease;
 }
 
-/* شكل زر الهامبرغر */
-.hamburger {
-  position: relative;
-  display: inline-block;
-  width: 30px;
-  height: 20px;
+#cookies-ok {
+  background: #cfe8a9;
+  color: #222;
+  padding: .4rem .8rem;
+  border-radius: 6px;
   cursor: pointer;
-  margin: 15px;
-  z-index: 1001;
-}
-.hamburger span {
-  position: absolute;
-  left: 0;
-  right: 0;
-  height: 3px;
-  background-color: #000; /* لون الخطوط */
-}
-.hamburger span:nth-child(1) { top: 0; }
-.hamburger span:nth-child(2) { top: 9px; }
-.hamburger span:nth-child(3) { bottom: 0; }
-
-/* ستايل القائمة */
-.menu {
-  position: absolute;
-  top: 0;
-  right: -300px;   /* مخفية باليمين */
-  width: 300px;
-  height: 100%;
-  background-color: #313728;
-  color: #fff;
-  transition: right 0.3s ease;
-  z-index: 1000;
-}
-.menu ul {
-  list-style-type: none;
-  padding: 0;
-  margin: 0;
-}
-.menu li {
-  padding: 12px;
-}
-.menu li a {
-  color: #fff;
-  text-decoration: none;
-  ;
 }
 
-/* اظهار القائمة لما يكون الشيكبوكس مفعل */
-#menu-toggle:checked ~ .menu {
-  right: 0;
+/* لما المستخدم يضغط OK (اللي هو label للـcheckbox) */
+#cookies-toggle:checked + #cookies-banner {
+  transform: translateY(100%); 
 }
-
-/* للشاشات الكبيرة: نرجع القائمة أفقية */
-@media (min-width: 768px) {
-  .hamburger { display: none; }
-  .menu {
-    position: static;
-    width: auto;
-    height: auto;
-    background: transparent;
-    right: auto;
-    transition: none;
-  }
-  .menu ul {
-    display: flex;
-    justify-content: center;
-    margin: 0;
-  }
-  .menu li {
-    padding: 0 15px;
-  }
-  .menu li a {
-    color: #fff;
-    font-weight: bold;
-  }
-}
-
-

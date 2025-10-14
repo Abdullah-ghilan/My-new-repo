@@ -5,6 +5,10 @@
     <meta charset="UTF-8">
     <title>save Budget</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Find top-rated meals within your budget — from pizza and burgers to Asian cuisine. Compare prices, filter by type and location, and eat smart without breaking the bank.">
+<meta name="keywords" content="budget meals, restaurants, pizza, burgers, asian cuisine">
+<meta name="author" content="Abdullah Alattfee">
+
 
     <!-- Google Font -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -18,7 +22,6 @@
         href="https://raw.githubusercontent.com/Abdullah-ghilan/My-new-repo/main/Assignment32/img/favicon-Hamburger.png">
 
 </head>
-
 
 
 <body>
@@ -64,7 +67,7 @@
             and discover the top-rated meals near you , from pizza to burgers to Asian cuisine.</p>
 
         <!--search form -->
-        <form class="search-form">
+        <form class="search-main">
 
             <!--Budget -->
             <select name="budget">
@@ -109,7 +112,7 @@
 
 
 
-    <section class="container">
+    <section class="container split">
         <section class="LeftSection">
             <h3>just trying for now</h3>
             <p> <em>Eating out can be expensive, but with a little planning, you can enjoy delicious meals without
@@ -126,7 +129,7 @@
 
 
 
-    <section class="container">
+    <!-- <section class="container split-reverse">
         <section class="RightSection">
             <h3>just trying for now</h3>
             <p> <em>Eating out can be expensive, but with a little planning, you can enjoy delicious meals without
@@ -137,9 +140,21 @@
         <aside class="Leftaside">
             <img src="img/food1.jpg" alt="sidePhoto" class="LeftSidePhoto" title="i'm Hungry ahh">
         </aside>
-    </section>
+    </section> --> <!-- to edit in the future ! -->
 
-    <hr class="divider">
+   
+
+
+    <article>
+
+        <figure class="figure">
+            <img src="img/food1.jpg" alt="food image" title="i'm Hungry ahh" class="center-img">
+            <figcaption>EetsMakelijk</figcaption>
+        </figure>
+        <p>Finding the best meals within your budget doesn't mean sacrificing flavor.</p>
+
+    </article>
+
 
     <table class="prices">
         <tr>
@@ -165,7 +180,7 @@
     </table>
 
 
-    <section class="container">
+    <section class="container food-list-container">
         <p> what is the food you like the most ??</p>
         <ul class="ul">
             <li>Pizza</li>
@@ -178,16 +193,7 @@
         </ul>
     </section>
 
-    <article>
-
-        <figure class="figure">
-            <img src="img/food1.jpg" alt="food image" title="i'm Hungry ahh" class="center-img">
-            <figcaption>EetsMakelijk</figcaption>
-        </figure>
-        <p>Finding the best meals within your budget doesn't mean sacrificing flavor.</p>
-
-    </article>
-
+    
 
 
 
@@ -195,7 +201,6 @@
 
 
     <section>
-        <h2>Sign up for our newsletter</h2>
         <form action="submit.php" method="post">
             <fieldset>
                 <legend>Subscribe for recommendations</legend>
@@ -211,12 +216,15 @@
                         <option value="">Choose cuisine</option>
                         <option value="italian">Italian</option>
                         <option value="mexican">Mexican</option>
-                      
                     </select>
                     <input type="submit" value="sign up">
             </fieldset>
         </form>
     </section>
+
+
+
+
 
 
 
@@ -235,6 +243,12 @@
 
 
 
+<input type="checkbox" id="cookies-toggle" hidden>
+
+<section id="cookies-banner">
+  We use cookies to improve your experience.
+  <label for="cookies-toggle" id="cookies-ok">OK</label>
+</section>
 
 
 </body>

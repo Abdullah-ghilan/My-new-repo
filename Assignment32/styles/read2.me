@@ -154,7 +154,7 @@
 
 
 
-    .LeftSection {
+    /*.LeftSection {
         float: left;
         width: 70%;
         padding: 0 30px;
@@ -166,17 +166,11 @@
         width: 70%;
         padding: 0 30px;
         box-sizing: border-box;
-    }
+    }*/
 
-    .LeftSection p::first-letter,
-    .RightSection p::first-letter {
-        font-size: 150%;
-        color: #313728;
-        font-weight: bold;
+    
 
-    }
-
-    .Rightaside {
+    /*.Rightaside {
         float: right;
         width: 30%;
         background: #333;
@@ -199,7 +193,42 @@
         background: none;
         padding: 0;
 
+    }*/
+
+    .LeftSection p::first-letter,
+    .RightSection p::first-letter {
+        font-size: 150%;
+        color: #313728;
+        font-weight: bold;
+
     }
+
+    /* new Grids */
+    
+
+/* نخلي كل container فيه Section و Aside يستخدم Grid */
+.container {
+  display: grid;
+  grid-template-columns: 70% 30%; 
+  align-items: start; 
+}
+
+
+.container > section,
+.container > aside {
+  padding: 0 30px;
+  box-sizing: border-box;
+}
+
+/* phone */
+@media (max-width: 768px)
+ {.container 
+    {
+    grid-template-columns: 1fr; /* عمود واحد */
+  }
+}
+
+
 
 
 
@@ -411,7 +440,7 @@
   ;
 }
 
-/* اظهار القائمة لما يكون الشيكبوكس مفعّل */
+/* اظهار القائمة لما يكون الشيكبوكس مفعل */
 #menu-toggle:checked ~ .menu {
   right: 0;
 }
