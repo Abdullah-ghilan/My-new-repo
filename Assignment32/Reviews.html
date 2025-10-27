@@ -1,56 +1,197 @@
 <!DOCTYPE html>
 <html lang="en-us">
+
 <head>
-  <meta charset="UTF-8">
-  <title>Reviews</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" type="text/css" href="styles/style.css">
+    <meta charset="UTF-8">
+    <title>Reviews - Save Budget</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="Read customer reviews and testimonials for the best budget-friendly meals. See what others are saying!">
+    <meta name="keywords" content="budget meals reviews, customer testimonials, restaurant ratings">
+    <meta name="author" content="Abdullah Alattfee">
+
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
+
+
+    <link rel="stylesheet" type="text/css" href="styles/style.css">
+    <link rel="icon" type="image/png"
+        href="https://raw.githubusercontent.com/Abdullah-ghilan/My-new-repo/main/Assignment32/img/favicon-Hamburger.png">
+
 </head>
+
+
 <body>
-  <header id="main-header">
-    <h1>Reviews</h1>
-  </header>
+   <header class="navbar" aria-label="Main">
+      <a class="brand" href="Home.html" aria-label="Go to homepage">
+        <img class="logo" src="img/logo-removebg-preview.png" alt="Logo">
+        <span class="brand-name">Cozy Café Guide</span>
+      </a>
 
-  <!-- زر القائمة (الهامبرغر) -->
-<input type="checkbox" id="menu-toggle">
-<label for="menu-toggle" class="hamburger">
-  <span></span>
-  <span></span>
-  <span></span>
-</label>
+      <nav class="primary" aria-label="Primary">
+        <ul>
+          <li><a href="Browse-Restaurants.html">Browse Cafés</a></li>
+          <li><a href="Reviews.html">Reviews</a></li>
+          <li><a href="top-picks.html">Top Sweets & Spots</a></li>
+          <li><a href="About.html">About</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
 
-<!-- القائمة الجانبية (للجوال) -->
-<nav class="menu">
-  <ul>
-    <li><a href="Home.html">Home</a></li>
-    <li><a href="Browse-Restaurants.html">Browse Restaurants</a></li>
-    <li><a href="Reviews.html">Reviews</a></li>
-    <li><a href="top-picks.html">Top Picks</a></li>
-    <li><a href="About.html">About</a></li>
-    <li><a href="contact.html">Contact</a></li>
-  </ul>
-</nav>
+      <a class="cta" href="#" rel="noopener">Get the App</a>
+    </header>
 
-<!-- شريط التنقل العلوي -->
-<nav id="navbar">
-  <ul>
-    <li><a href="Home.html">Home</a></li>
-    <li><a href="Browse-Restaurants.html">Browse Restaurants</a></li>
-    <li><a href="Reviews.html">Reviews</a></li>
-    <li><a href="top-picks.html">Top Picks</a></li>
-    <li><a href="About.html">About</a></li>
-    <li><a href="contact.html">Contact</a></li>
-  </ul>
-</nav>
+    <input type="checkbox" id="menu-toggle">
+    <label for="menu-toggle" class="hamburger">
+        <span></span>
+        <span></span>
+        <span></span>
+    </label>
+
+    <nav class="menu">
+        <ul>
+            <li><a href="Browse-Restaurants.html">Browse Cafés</a></li>
+            <li><a href="Reviews.html">Reviews</a></li>
+            <li><a href="top-picks.html">Top Sweets & Spots</a></li>
+            <li><a href="About.html">About</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+    </nav>
 
 
-  <section class="container">
-    <h2>What people are saying</h2>
-    <p>Read honest reviews from real customers before you dine. Your next favorite meal could be one review away!</p>
-  </section>
+    <section id="showcase" class="reviews-showcase">
+        <h2> “Hear It From Our Budget-Smart Eaters!”</h2>
+        <p class="container"><strong>Real Experiences, Real Savings.</strong>
+            Check out genuine reviews and see why we're the top choice for affordable dining.</p>
+    </section>
 
-  <footer id="main-footer">
-    &copy; All Rights Reserved 2001.
-  </footer>
+    <main class="container reviews-main">
+        <h3 class="section-title">Latest & Top-Rated Testimonials ⭐</h3>
+
+        <article class="reviews-grid">
+            
+            <article class="review-card stars-5">
+                <header class="review-header">
+                    <h4 class="restaurant-name">The Shawarma Spot - Rotterdam</h4>
+                    <p class="rating-stars">⭐⭐⭐⭐⭐</p>
+                </header>
+                <p class="review-text">"The best Shawarma I've ever had! The price is excellent and the quality is superb. I managed to grab a great dinner for under \$10. Your site helped me discover this gem! Highly recommended."</p>
+                <footer class="review-meta">
+                    <p class="reviewer-info">👤 Abdullah A.</p>
+                    <p class="review-date">🗓️ Oct 15, 2025</p>
+                </footer>
+            </article>
+
+            <article class="review-card stars-4">
+                <header class="review-header">
+                    <h4 class="restaurant-name">Pizza E Pasta - Amsterdam</h4>
+                    <p class="rating-stars">⭐⭐⭐⭐</p>
+                </header>
+                <p class="review-text">"The pizza was very delicious and the crust was crispy. The budget was right on point, but the delivery service was a bit slow. Overall, a worthwhile experience for those seeking quality Italian food at a reasonable price."</p>
+                <footer class="review-meta">
+                    <p class="reviewer-info">👤 Fatima Z.</p>
+                    <p class="review-date">🗓️ Oct 12, 2025</p>
+                </footer>
+            </article>
+
+            <article class="review-card stars-3">
+                <header class="review-header">
+                    <h4 class="restaurant-name">Asian Wok Express - Den Haag</h4>
+                    <p class="rating-stars">⭐⭐⭐</p>
+                </header>
+                <p class="review-text">"The noodles were good, but the portion size was smaller than I expected. The price was great, but I wish there were more diverse vegetarian options. Thanks for helping me save money!"</p>
+                <footer class="review-meta">
+                    <p class="reviewer-info">👤 Youssef A.</p>
+                    <p class="review-date">🗓️ Oct 10, 2025</p>
+                </footer>
+            </article>
+
+            <article class="review-card stars-5">
+                <header class="review-header">
+                    <h4 class="restaurant-name">The Burger Hub - Utrecht</h4>
+                    <p class="rating-stars">⭐⭐⭐⭐⭐</p>
+                </header>
+                <p class="review-text">"Gourmet burger at an economy price! I never thought I'd find this quality at this price point. The website is easy to use and the ratings helped me choose easily. Five stars without hesitation!"</p>
+                <footer class="review-meta">
+                    <p class="reviewer-info">👤 Noura K.</p>
+                    <p class="review-date">🗓️ Oct 8, 2025</p>
+                </footer>
+            </article>
+             <article class="review-card stars-5">
+                <header class="review-header">
+                    <h4 class="restaurant-name">Waffle House - Haarlem</h4>
+                    <p class="rating-stars">⭐⭐⭐⭐⭐</p>
+                </header>
+                <p class="review-text">"Perfect dessert spot for my student budget. Delicious waffles and great coffee. I check this site before going out every weekend now. A real life-saver for budget-conscious foodies."</p>
+                <footer class="review-meta">
+                    <p class="reviewer-info">👤 Omar G.</p>
+                    <p class="review-date">🗓️ Oct 5, 2025</p>
+                </footer>
+            </article>
+             <article class="review-card stars-4">
+                <header class="review-header">
+                    <h4 class="restaurant-name">Mexican Grill - Zandvoort</h4>
+                    <p class="rating-stars">⭐⭐⭐⭐</p>
+                </header>
+                <p class="review-text">"Great tacos and burritos, very fresh ingredients. It was slightly above my initial budget, but worth the extra few dollars for the quality. Will definitely visit again when I'm in Zandvoort."</p>
+                <footer class="review-meta">
+                    <p class="reviewer-info">👤 Ben H.</p>
+                    <p class="review-date">🗓️ Sep 30, 2025</p>
+                </footer>
+            </article>
+
+        </article>
+        
+        <section class="action-buttons">
+            <a href="contact.html" class="btn primary-btn">Submit Your Review</a>
+            <a href="Browse-Restaurants.html" class="btn secondary-btn">Browse Restaurants</a>
+        </section>
+        
+    </main>
+    <section>
+        <form action="submit.php" method="post">
+            <fieldset>
+                <legend>Subscribe for recommendations</legend>
+
+                <label for="username">Username:</label>
+                <input type="text" id="username" name="username" placeholder="like ur name" required>
+
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" placeholder="you@gmail.com" required>
+
+                <label for="cuisine">Cuisine</label>
+                <select id="cuisine" name="cuisine">
+                    <option value="">Choose cuisine</option>
+                    <option value="italian">Italian</option>
+                    <option value="mexican">Mexican</option>
+                </select>
+                <input type="submit" value="sign up">
+            </fieldset>
+        </form>
+    </section>
+
+
+    <a href="https://www.instagram.com/" target="_blank" id="instagram-button">
+        <img src="img/instagram-logo.png.webp" alt="instagram" title="instagram">
+    </a>
+
+
+    <footer id="main-footer">
+        &copy;All Rights Reserved 2001.
+    </footer>
+
+
+    <input type="checkbox" id="cookies-toggle" hidden>
+
+    <section id="cookies-banner">
+        We use cookies to improve your experience.
+        <label for="cookies-toggle" id="cookies-ok">OK</label>
+    </section>
+
+
 </body>
+
 </html>

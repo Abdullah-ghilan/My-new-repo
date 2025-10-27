@@ -1,88 +1,96 @@
 <!DOCTYPE html>
 <html lang="en-us">
+
 <head>
-  <meta charset="UTF-8">
-  <title>Browse Restaurants</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" type="text/css" href="styles/style.css">
+    <meta charset="UTF-8">
+    <title>save Budget</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Find top-rated meals within your budget — from pizza and burgers to Asian cuisine. Compare prices, filter by type and location, and eat smart without breaking the bank.">
+<meta name="keywords" content="budget meals, restaurants, pizza, burgers, asian cuisine">
+<meta name="author" content="Abdullah Alattfee">
+
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
+
+
+    <link rel="stylesheet" type="text/css" href="styles/style.css">
+    <link rel="icon" type="image/png"
+        href="https://raw.githubusercontent.com/Abdullah-ghilan/My-new-repo/main/Assignment32/img/favicon-Hamburger.png">
+
 </head>
 
 
 
+<body class="page-browse">
+    <header class="navbar" aria-label="Main">
+      <a class="brand" href="Home.html" aria-label="Go to homepage">
+        <img class="logo" src="img/logo-removebg-preview.png" alt="Logo">
+        <span class="brand-name">Cozy Café Guide</span>
+      </a>
+
+      <nav class="primary" aria-label="Primary">
+        <ul>
+          <li><a href="Browse-Restaurants.html">Browse Cafés</a></li>
+          <li><a href="Reviews.html">Reviews</a></li>
+          <li><a href="top-picks.html">Top Sweets & Spots</a></li>
+          <li><a href="About.html">About</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
+
+      <a class="cta" href="#" rel="noopener">Get the App</a>
+    </header>
+
+    <input type="checkbox" id="menu-toggle">
+    <label for="menu-toggle" class="hamburger">
+        <span></span>
+        <span></span>
+        <span></span>
+    </label>
+
+    <nav class="menu">
+        <ul>
+            <li><a href="Browse-Restaurants.html">Browse Cafés</a></li>
+            <li><a href="Reviews.html">Reviews</a></li>
+            <li><a href="top-picks.html">Top Sweets & Spots</a></li>
+            <li><a href="About.html">About</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+    </nav>
 
 
-<body>
-  <header id="main-header">
-    <h1>Browse Restaurants</h1>
-  </header>
-  <!-- زر القائمة (الهامبرغر) -->
-<input type="checkbox" id="menu-toggle">
-<label for="menu-toggle" class="hamburger">
-  <span></span>
-  <span></span>
-  <span></span>
-</label>
+  <main>
+      <section id="showcase">
+        <h2> “Find the Best Meals Within Your Budget: Anytime, Anywhere.”</h2>
+        <p class="container"><strong>Set Your Budget</strong>
+            and discover the top-rated meals near you — from pizza to burgers to Asian cuisine.</p>
 
-<!-- القائمة الجانبية (للجوال) -->
-<nav class="menu">
-  <ul>
-    <li><a href="Home.html">Home</a></li>
-    <li><a href="Browse-Restaurants.html">Browse Restaurants</a></li>
-    <li><a href="Reviews.html">Reviews</a></li>
-    <li><a href="top-picks.html">Top Picks</a></li>
-    <li><a href="About.html">About</a></li>
-    <li><a href="contact.html">Contact</a></li>
-  </ul>
-</nav>
-
-<!-- شريط التنقل العلوي -->
-<nav id="navbar">
-  <ul>
-    <li><a href="Home.html">Home</a></li>
-    <li><a href="Browse-Restaurants.html">Browse Restaurants</a></li>
-    <li><a href="Reviews.html">Reviews</a></li>
-    <li><a href="top-picks.html">Top Picks</a></li>
-    <li><a href="About.html">About</a></li>
-    <li><a href="contact.html">Contact</a></li>
-  </ul>
-</nav>
-
-
-  <section class="container">
-    <h2>Find your next meal destination</h2>
-    <p>Explore top-rated restaurants that match your budget and taste. From cozy cafés to gourmet dining, we’ve got you covered.</p>
-  </section>
-
-
-  <!--search form -->
         <form class="search-main">
 
-            <!--Budget -->
-            <select name="budget">
+            <select name="budget" aria-label="Budget">
                 <option value="">Select Budget</option>
-                <option value="5-10">&dollar;5 - &dollar;10</option>
-                <option value="10-15">&dollar;10 - &dollar;15</option>
-                <option value="15-20">&dollar;15 - &dollar;20</option>
-                <option value="20-25">&dollar;20 - &dollar;25</option>
-                <option value="25-30">&dollar;25 - &dollar;30</option>
+                <option value="5-10">$5 - $10</option>
+                <option value="10-15">$10 - $15</option>
+                <option value="15-20">$15 - $20</option>
+                <option value="20-25">$20 - $25</option>
+                <option value="25-30">$25 - $30</option>
             </select>
 
-            <!--Cuisine Type -->
-            <select name="select type">
-                <option value="">Select type</option>
+            <select name="cuisine" aria-label="Cuisine">
+                <option value="">Select Type</option>
                 <option value="italian">Italian</option>
                 <option value="mexican">Mexican</option>
                 <option value="asian">Asian</option>
                 <option value="middle-eastern">Middle Eastern</option>
-                <option value="indian">indian</option>
-                <option value="coffee">coffee</option>
-                <option value="sweets">sweets</option>
-
-
+                <option value="indian">Indian</option>
+                <option value="coffee">Coffee</option>
+                <option value="sweets">Sweets</option>
             </select>
 
-            <!--Location -->
-            <select name="location">
+            <select name="location" aria-label="Location">
                 <option value="">Select Location</option>
                 <option value="Amsterdam">Amsterdam</option>
                 <option value="denhaag">Den Haag</option>
@@ -94,12 +102,130 @@
 
             <button type="submit">Search</button>
         </form>
-        <!--end of search form -->
+        </section>
 
+    <section class="card-grid" aria-label="Results">
+      <article class="card">
+        <figure>
+          <img src="img/food2.jpg" alt="Wood-fired pizza at Nonna’s Kitchen" loading="lazy" />
+        </figure>
+        <h3>Nonna’s Kitchen</h3>
+        <p><em>Handmade pasta &amp; wood-fired pizza.</em></p>
+        <span class="meta">
+          <span class="chip">Italian</span>
+          <span class="chip">$15–$20</span>
+          <span class="chip">Amsterdam</span>
+          <span>★★★★☆ (4.5)</span>
+        </span>
+        <span class="actions">
+          <a href="#" class="btn">View</a>
+          <a href="#" class="btn secondary">Directions</a>
+        </span>
+      </article>
+
+      <article class="card">
+        <figure>
+          <img src="img/food1.jpg" alt="Street tacos at El Barrio" loading="lazy" />
+        </figure>
+        <h3>El Barrio</h3>
+        <p><em>Street tacos, fresh salsas, late-night.</em></p>
+        <span class="meta">
+          <span class="chip">Mexican</span>
+          <span class="chip">$10–$15</span>
+          <span class="chip">Rotterdam</span>
+          <span>★★★★☆ (4.3)</span>
+        </span>
+        <span class="actions">
+          <a href="#" class="btn">View</a>
+          <a href="#" class="btn secondary">Directions</a>
+        </span>
+      </article>
+
+      <article class="card">
+        <figure>
+          <img src="img/food2.jpg" alt="Ramen bowl at Noodle Craft" loading="lazy" />
+        </figure>
+        <h3>Noodle Craft</h3>
+        <p><em>Umami broths, springy noodles.</em></p>
+        <span class="meta">
+          <span class="chip">Asian</span>
+          <span class="chip">$5–$10</span>
+          <span class="chip">Utrecht</span>
+          <span>★★★★☆ (4.4)</span>
+        </span>
+        <span class="actions">
+          <a href="#" class="btn">View</a>
+          <a href="#" class="btn secondary">Directions</a>
+        </span>
+      </article>
+
+      <article class="card">
+        <figure>
+          <img src="img/food1.jpg" alt="Falafel and mezze at Cedar &amp; Spice" loading="lazy" />
+        </figure>
+        <h3>Cedar &amp; Spice</h3>
+        <p><em>Falafel, shawarma, mezze spreads.</em></p>
+        <span class="meta">
+          <span class="chip">Middle Eastern</span>
+          <span class="chip">$8–$15</span>
+          <span class="chip">Den Haag</span>
+          <span>★★★★☆ (4.2)</span>
+        </span>
+        <span class="actions">
+          <a href="#" class="btn">View</a>
+          <a href="#" class="btn secondary">Directions</a>
+        </span>
+      </article>
+
+      <article class="card">
+        <figure>
+          <img src="img/food2.jpg" alt="Curry at Masala House" loading="lazy" />
+        </figure>
+        <h3>Masala House</h3>
+        <p><em>Regional curries &amp; tandoor classics.</em></p>
+        <span class="meta">
+          <span class="chip">Indian</span>
+          <span class="chip">$10–$20</span>
+          <span class="chip">Haarlem</span>
+          <span>★★★★★ (4.7)</span>
+        </span>
+        <span class="actions">
+          <a href="#" class="btn">View</a>
+          <a href="#" class="btn secondary">Directions</a>
+        </span>
+      </article>
     </section>
+
+    <section class="container" aria-label="Top Deals">
+      <h3 class="section-title">Top Deals Today</h3>
+      <table class="prices">
+        <thead>
+          <tr>
+            <th>Restaurant</th>
+            <th>Cuisine</th>
+            <th>Budget</th>
+            <th>Location</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr><td>Nonna’s Kitchen</td><td>Italian</td><td>$15–$20</td><td>Amsterdam</td></tr>
+          <tr><td>El Barrio</td><td>Mexican</td><td>$10–$15</td><td>Rotterdam</td></tr>
+          <tr><td>Noodle Craft</td><td>Asian</td><td>$5–$10</td><td>Utrecht</td></tr>
+          <tr><td>Cedar &amp; Spice</td><td>Middle Eastern</td><td>$8–$15</td><td>Den Haag</td></tr>
+          <tr><td>Masala House</td><td>Indian</td><td>$10–$20</td><td>Haarlem</td></tr>
+        </tbody>
+      </table>
+    </section>
+  </main>
 
   <footer id="main-footer">
     &copy; All Rights Reserved 2001.
   </footer>
+
+  <input type="checkbox" id="cookies-toggle" hidden />
+  <section id="cookies-banner" aria-live="polite">
+    We use cookies to improve your experience.
+    <label for="cookies-toggle" id="cookies-ok">OK</label>
+  </section>
 </body>
 </html>

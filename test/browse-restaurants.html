@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <title>تصفح المطاعم</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles/style.css">
+</head>
+<body class="grid-layout">
+    <header id="main-header"><h1>تصفح المطاعم</h1></header>
+    <nav id="navbar">
+        </nav>
+    <main class="container" style="grid-area: main;">
+        <h2>ابحث حسب الميزانية ونوع المطبخ</h2>
+        
+        <form class="search-main" style="display: grid; grid-template-columns: repeat(4, 1fr); gap: 10px; margin-top: 20px;">
+            <select name="budget"><option>الميزانية</option></select>
+            <select name="select type"><option>النوع</option></select>
+            <select name="location"><option>الموقع</option></select>
+            <button type="submit">بحث</button>
+        </form>
+
+        <section class="two-col-equal">
+            <h3>مطاعم إيطالية موصى بها</h3>
+            <p>مطعم "بيلا باستا" - تقييم 4.5 نجوم، متوسط سعر $17.</p>
+        </section>
+
+        <section class="two-col-equal">
+            <h3>وجبات آسيوية اقتصادية</h3>
+            <p>نودلز "الذوق الشرقي" - تقييم 4.2 نجوم، متوسط سعر $12.</p>
+        </section>
+    </main>
+    <footer id="main-footer"><p>&copy; جميع الحقوق محفوظة 2024.</p></footer>
+</body>
+</html>

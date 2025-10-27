@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en-us" dir="ltr">
+<head>
+  <meta charset="UTF-8" />
+  <title>Save Budget — Find Great Meals</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="Find top-rated meals within your budget — from pizza and burgers to Asian cuisine. Compare prices, filter by type and location, and eat smart without breaking the bank.">
+  <meta name="keywords" content="budget meals, restaurants, pizza, burgers, asian cuisine">
+  <meta name="author" content="Abdullah Alattfee">
+
+  <!-- Google Font -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;600;700&display=swap" rel="stylesheet" />
+
+  <link rel="icon" type="image/png" href="https://raw.githubusercontent.com/Abdullah-ghilan/My-new-repo/main/Assignment32/img/favicon-Hamburger.png">
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+
+<body>
+
+  <!-- Top Header -->
+  <header id="main-header">
+    <h1>Best Meals Within Your Budget</h1>
+  </header>
+
+  <!-- Hamburger (checkbox hack) -->
+  <input type="checkbox" id="menu-toggle" />
+  <label for="menu-toggle" class="hamburger" aria-label="Open menu">
+    <span></span><span></span><span></span>
+  </label>
+
+  <!-- Slide-out Menu -->
+  <nav class="menu" aria-label="Mobile Menu">
+    <ul>
+      <li><a href="#showcase">Home</a></li>
+      <li><a href="#features">Features</a></li>
+      <li><a href="#deals">Top Picks</a></li>
+      <li><a href="#subscribe">Subscribe</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </nav>
+
+  <!-- Primary Navbar -->
+  <nav id="navbar" aria-label="Primary">
+    <ul>
+      <li><a href="#showcase">Home</a></li>
+      <li><a href="#features">Features</a></li>
+      <li><a href="#deals">Top Picks</a></li>
+      <li><a href="#subscribe">Subscribe</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </nav>
+
+  <!-- HERO / SHOWCASE -->
+  <section id="showcase" aria-label="Showcase">
+    <h2>Find the Best Meals Within Your Budget — Anytime, Anywhere.</h2>
+    <p class="container"><strong>Set your budget</strong> and discover top-rated meals near you — pizza, burgers, Asian & more.</p>
+
+    <!-- Search Form (Grid) -->
+    <form class="search-main" action="#" method="get">
+      <select name="budget" aria-label="Budget">
+        <option value="">Select Budget</option>
+        <option value="5-10">$5 - $10</option>
+        <option value="10-15">$10 - $15</option>
+        <option value="15-20">$15 - $20</option>
+        <option value="20-25">$20 - $25</option>
+        <option value="25-30">$25 - $30</option>
+      </select>
+
+      <select name="select type" aria-label="Cuisine">
+        <option value="">Select type</option>
+        <option value="italian">Italian</option>
+        <option value="mexican">Mexican</option>
+        <option value="asian">Asian</option>
+        <option value="middle-eastern">Middle Eastern</option>
+        <option value="indian">Indian</option>
+        <option value="coffee">Coffee</option>
+        <option value="sweets">Sweets</option>
+      </select>
+
+      <select name="location" aria-label="Location">
+        <option value="">Select Location</option>
+        <option value="Amsterdam">Amsterdam</option>
+        <option value="denhaag">Den Haag</option>
+        <option value="haarlem">Haarlem</option>
+        <option value="rotterdam">Rotterdam</option>
+        <option value="utrecht">Utrecht</option>
+        <option value="zandvoort">Zandvoort</option>
+      </select>
+
+      <button type="submit">Search</button>
+    </form>
+  </section>
+
+
+
+
+
+  
+
+  <!-- Feature Split (Grid only, no divs) -->
+  <section class="container split" id="features">
+    <section class="LeftSection">
+      <h3>Eat smart, not expensive</h3>
+      <p><em>Plan your bites and enjoy great flavors without breaking the bank. Curated lists, smart filters, and real-time vibes to keep your wallet happy.</em></p>
+      <p><em>Our picks highlight best-value meals around you — updated often and arranged in an easy grid you can skim in seconds.</em></p>
+    </section>
+
+    <aside class="Rightaside">
+      <img class="RightSidePhoto" src="https://images.unsplash.com/photo-1544025162-d76694265947?q=80&w=1200&auto=format&fit=crop" alt="Tasty budget meal" />
+    </aside>
+  </section>
+
+  <!-- Top Picks / Deals (cards via table-free grid) -->
+  <section class="container split-reverse" id="deals" aria-label="Top Picks">
+    <section class="RightSection">
+      <h3>Today’s Top Picks</h3>
+      <ul class="ul">
+        <li>Margherita Slice — from $4</li>
+        <li>Classic Burger — from $6</li>
+        <li>Chicken Teriyaki Bowl — from $9</li>
+        <li>Falafel Wrap — from $5</li>
+      </ul>
+    </section>
+
+    <aside class="Leftaside">
+      <img class="LeftSidePhoto" src="https://images.unsplash.com/photo-1565299624946-b28f40a0ae38?q=80&w=1200&auto=format&fit=crop" alt="Fresh pizza slice" />
+    </aside>
+  </section>
+
+  <!-- Article & Figure -->
+  <article>
+    <figure class="figure">
+      <img class="center-img" src="https://images.unsplash.com/photo-1550547660-d9450f859349?q=80&w=1200&auto=format&fit=crop" alt="Burger plate" />
+      <figcaption>EetsMakelijk</figcaption>
+    </figure>
+    <p>Finding the best meals within your budget doesn't mean sacrificing flavor.</p>
+  </article>
+
+  <!-- Prices Table -->
+  <table class="prices" aria-label="Cuisine Prices">
+    <tr><th>Cuisine</th><th>Price</th></tr>
+    <tr><td>Italian</td><td>from $15</td></tr>
+    <tr><td>Mexican</td><td>from $6</td></tr>
+    <tr><td>Asian</td><td>from $10</td></tr>
+    <tr><td>Middle Eastern</td><td>from $8</td></tr>
+  </table>
+
+  <!-- Preference List -->
+  <section class="container food-list-container" aria-label="Preferences">
+    <p>What is the food you like the most?</p>
+    <ul class="ul">
+      <li>Pizza</li>
+      <li>Burgers</li>
+      <li>Asian Cuisine</li>
+      <li>Mexican Food</li>
+      <li>Italian Food</li>
+      <li>Indian Food</li>
+      <li>French Food??!! Come on! are u serious ??</li>
+    </ul>
+  </section>
+
+  <!-- Subscribe form -->
+  <section id="subscribe">
+    <form action="#" method="post">
+      <fieldset>
+        <legend>Subscribe for recommendations</legend>
+        <label for="username">Username:</label>
+        <input id="username" name="username" type="text" placeholder="like ur name" required />
+
+        <label for="email">Email:</label>
+        <input id="email" name="email" type="email" placeholder="you@gmail.com" required />
+
+        <label for="cuisine">Cuisine</label>
+        <select id="cuisine" name="cuisine">
+          <option value="">Choose cuisine</option>
+          <option value="italian">Italian</option>
+          <option value="mexican">Mexican</option>
+        </select>
+
+        <input type="submit" value="sign up" />
+      </fieldset>
+    </form>
+  </section>
+
+  <!-- Contact Form (keeps your class name) -->
+  <section id="contact">
+    <form class="contact-form" action="#" method="post">
+      <label for="msg-name">Name</label>
+      <input id="msg-name" name="name" type="text" placeholder="Your name" required />
+
+      <label for="msg-email">Email</label>
+      <input id="msg-email" name="email" type="email" placeholder="you@example.com" required />
+
+      <label for="msg-text">Message</label>
+      <textarea id="msg-text" name="message" rows="5" placeholder="Tell us what you crave…"></textarea>
+
+      <button type="submit">Send</button>
+    </form>
+  </section>
+
+  <!-- Instagram floating button -->
+  <a href="https://www.instagram.com/" target="_blank" id="instagram-button" aria-label="Open Instagram">
+    <img src="img/instagram-logo.png.webp" alt="instagram" title="instagram" />
+  </a>
+
+  <!-- Footer -->
+  <footer id="main-footer">
+    &copy; All Rights Reserved 2025.
+  </footer>
+
+  <!-- Cookies banner (checkbox pattern with your same IDs) -->
+  <input type="checkbox" id="cookies-toggle" hidden />
+  <section id="cookies-banner" role="dialog" aria-live="polite" aria-label="Cookies Notice">
+    We use cookies to improve your experience.
+    <label for="cookies-toggle" id="cookies-ok" role="button" aria-label="Accept cookies">OK</label>
+  </section>
+</body>
+</html>
