@@ -238,7 +238,7 @@ body{ font-size: clamp(16px, 1.6vw, 18px); }
 
 
 #showcase {
-	background-image: url('../img/coffee\ and\ desssert.jpg');
+	background-image: url('../img/coffee-and-desssert.jpg');
 	;
 	background-position: center right;
 	min-height: 300px;
