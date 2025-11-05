@@ -1,0 +1,848 @@
+    body {
+        font-size: 16px;
+        font-family: "Roboto", sans-serif;
+        background-color: #ffffff;
+        line-height: 1.6em;
+        margin: 0;
+
+    }
+
+    .container {
+        width: 80%;
+        margin: auto;
+        overflow: hidden;
+    }
+
+    #main-header {
+        background-color: rgb(139, 139, 124);
+        color: #333;
+        letter-spacing: 1px;
+        text-indent: 1em;
+        word-spacing: 0.5em;
+        text-transform: uppercase;
+        text-align: center;
+        position: relative;
+    }
+
+
+    #navbar {
+
+        background-color: #313728;
+        color: white;
+
+
+
+    }
+
+    #navbar ul {
+        list-style-type: none;
+
+        padding: 15px;
+        text-align: center;
+        /*overflow: hidden;*/
+        transition: 0.3s;
+    }
+
+    #navbar li {
+        display: inline;
+        margin: 20px;
+    }
+
+    #navbar a {
+        text-decoration: none;
+        color: white;
+        font-size: 20px;
+        font-weight: bold;
+    }
+
+
+    #navbar>ul>li>a {
+        padding: 7px 20px;
+        border-radius: 5px;
+    }
+
+    #navbar a:active {
+        background-color: #000000;
+    }
+
+    #navbar a:hover {
+        color: #cfe8a9;
+        background-color: #444;
+
+    }
+
+
+    #showcase {
+        background-image: url('../img/menu.jpg');
+        ;
+        background-position: center right;
+        min-height: 300px;
+        margin-bottom: 30px;
+        text-align: center;
+
+
+        /*align-items: center;*/
+    }
+
+    #showcase h2 {
+        color: rgb(255, 255, 255);
+        font-size: 50px;
+        line-height: 1.6em;
+        padding-top: 30px;
+        text-shadow: #333 5px 5px 7px;
+
+
+    }
+
+    #showcase p {
+        color: rgb(255, 255, 255);
+        font-size: 20px;
+        text-shadow: #333 5px 5px 7px;
+    }
+
+    /* Search Form Styles */
+    .search-form {
+        margin-top: 30px;
+        /* مسافة من فوق */
+        display: flex;
+        /* نخلي العناصر جواته تتحط في خط واحد */
+        justify-content: center;
+        /* نخليهم يتوسّطوا (بالعرض) */
+        gap: 10px;
+        /* فراغ بين العناصر */
+        flex-wrap: wrap;
+        /* لو الشاشة صغيرة، العناصر تنزل تحت بعض */
+    }
+
+    .search-form select,
+    .search-form button {
+        padding: 10px 15px;
+        /* حشوة داخلية: تخلي العنصر أكبر وأسهل للضغط */
+        font-size: 16px;
+        /* حجم الخط */
+        border: none;
+        /* نشيل الحدود الافتراضية */
+        border-radius: 5px;
+        /* زوايا مدوّرة */
+    }
+
+    .search-form select {
+        background: #fff;
+        /* الخلفية بيضاء */
+        min-width: 160px;
+        /* أقل عرض للقائمة 160px */
+    }
+
+    .search-form button {
+        background-color: #313728;
+        /* لون الخلفية غامق (أخضر زيتوني/أسود مائل) */
+        color: #fff;
+        /* الخط أبيض */
+        font-weight: bold;
+        /* خط غامق */
+        cursor: pointer;
+        /* المؤشر يتحول ليد عند المرور */
+        transition: 0.3s;
+        /* حركة ناعمة عند التغيير */
+    }
+
+    .search-form button:hover {
+        background-color: #444;
+        /* يغيّر اللون لو مرّرت الماوس عليه */
+    }
+    /* End of Search Form Styles */
+
+
+
+    .LeftSection {
+        float: left;
+        width: 70%;
+        padding: 0 30px;
+        box-sizing: border-box;
+    }
+
+    .RightSection {
+        float: right;
+        width: 70%;
+        padding: 0 30px;
+        box-sizing: border-box;
+    }
+
+    .LeftSection p::first-letter,
+    .RightSection p::first-letter {
+        font-size: 150%;
+        color: #313728;
+        font-weight: bold;
+
+    }
+
+    .Rightaside {
+        float: right;
+        width: 30%;
+        background: #333;
+        color: #fff;
+        padding: 10px;
+        box-sizing: border-box;
+        background: none;
+        padding: 0;
+        
+
+    }
+
+    .Leftaside {
+        float: left;
+        width: 30%;
+        background: #333;
+        color: #fff;
+        padding: 10px;
+        box-sizing: border-box;
+        background: none;
+        padding: 0;
+
+    }
+
+
+
+
+    /* nth-child*/
+    .prices {
+        border-collapse: collapse;
+        width: 60%;
+        margin: 20px auto;
+        text-align: center;
+        font-size: 18px;
+    }
+
+    .prices th,
+    .prices td {
+        border: 1px solid #ddd;
+        padding: 8px;
+    }
+
+    .prices th {
+        background-color: #313728;
+        color: white;
+        text-transform: uppercase;
+    }
+
+    /* odd rows white */
+    .prices tr:nth-child(odd) {
+        background: #FFF;
+    }
+
+    /* even rows light blue */
+    .prices tr:nth-child(even) {
+        background: #CFF;
+    }
+
+    /*end of nth-child*/
+
+
+
+
+
+
+    /* insta button */
+    #instagram-button {
+        position: fixed;
+        bottom: 20px;
+        right: 20px;
+        width: 50px;
+        height: 50px;
+        z-index: 2000;
+    }
+
+    #instagram-button img {
+        width: 100%;
+        height: auto;
+        border-radius: 50%;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+        transition: transform 0.3s;
+    }
+
+    #instagram-button img:hover {
+        transform: scale(1.1);
+        /* تكبر شوي عند المرور */
+    }
+
+    /* End of insta button */
+
+
+    /* Classes for img */
+    .RightSidePhoto,
+    .LeftSidePhoto {
+        display: block;
+        width: 50%;
+        height: auto;
+        border-radius: 10px;
+        object-fit: cover;
+        border-color: #333;
+        border-style: solid;
+        border-width: 2px;
+    }
+
+
+
+
+
+    .center-img {
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        width: 250px;
+        height: auto;
+    }
+
+    .left-img {
+        float: left;
+        width: auto;
+        height: auto;
+    }
+
+    /* end of Classes for img */
+
+    /* Classes for figure and figcaption */
+    .figure {
+        text-align: center;
+        /* centers the caption text */
+        margin: 20px auto;
+        /* centers the whole figure block */
+        width: fit-content;
+        border-color: #333;
+        border-style: solid;
+        border-width: 2px;
+
+    }
+
+    .figure figcaption {
+        font-size: 18px;
+        font-style: italic;
+        margin-top: 10px;
+    }
+
+    /*  end of Classes for figure and figcaption */
+
+
+    #main-footer {
+        background-color: #333;
+        color: #fff;
+        text-align: center;
+        padding: 20px;
+        margin-top: 40px;
+    }
+
+
+    hr.divider {
+        border: 0;
+        height: 1px;
+        background: #333;
+        margin: 40px 0;
+    }
+
+
+
+
+
+
+    @media(max-width: 600px) {
+
+        #main,
+        #aside {
+            width: 100%;
+            float: none;
+        }
+
+        #showcase h2 {
+            font-size: 30px;
+        }
+    }
+
+
+
+    /* اخفاء الـ checkbox */
+#menu-toggle {
+  display: none;
+}
+
+/* شكل زر الهامبرغر */
+.hamburger {
+  position: relative;
+  display: inline-block;
+  width: 30px;
+  height: 20px;
+  cursor: pointer;
+  margin: 15px;
+  z-index: 1001;
+}
+.hamburger span {
+  position: absolute;
+  left: 0;
+  right: 0;
+  height: 3px;
+  background-color: #000; /* لون الخطوط */
+}
+.hamburger span:nth-child(1) { top: 0; }
+.hamburger span:nth-child(2) { top: 9px; }
+.hamburger span:nth-child(3) { bottom: 0; }
+
+/* ستايل القائمة */
+.menu {
+  position: absolute;
+  top: 0;
+  right: -300px;   /* مخفية باليمين */
+  width: 300px;
+  height: 100%;
+  background-color: #313728;
+  color: #fff;
+  transition: right 0.3s ease;
+  z-index: 1000;
+}
+.menu ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+.menu li {
+  padding: 12px;
+}
+.menu li a {
+  color: #fff;
+  text-decoration: none;
+  ;
+}
+
+/* اظهار القائمة لما يكون الشيكبوكس مفعّل */
+#menu-toggle:checked ~ .menu {
+  right: 0;
+}
+
+/* للشاشات الكبيرة: نرجع القائمة أفقية */
+@media (min-width: 768px) {
+  .hamburger { display: none; }
+  .menu {
+    position: static;
+    width: auto;
+    height: auto;
+    background: transparent;
+    right: auto;
+    transition: none;
+  }
+  .menu ul {
+    display: flex;
+    justify-content: center;
+    margin: 0;
+  }
+  .menu li {
+    padding: 0 15px;
+  }
+  .menu li a {
+    color: #fff;
+    font-weight: bold;
+  }
+}
+
+
+
+
+section form {
+  display: grid;
+  grid-template-rows: auto 1fr;
+  justify-items: center;
+  background: #f8f8f5;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  padding: 25px 30px;
+  width: 70%;
+  margin: 40px auto;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+    section form fieldset {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  gap: 15px 20px;
+  width: 100%;
+  border: none;
+}
+section form legend {
+  grid-column: 1 / -1;
+  text-align: center;
+  font-size: 1.3em;
+  font-weight: bold;
+  color: #313728;
+  margin-bottom: 15px;
+}
+section form label {
+  color: #313728;
+  font-weight: 500;
+}
+
+section form input[type="text"],
+section form input[type="email"],
+section form select {
+  width: 100%;
+  padding: 10px;
+  border-radius: 6px;
+  border: 1px solid #aaa;
+  font-size: 16px;
+  box-sizing: border-box;
+}
+
+section form input[type="submit"] {
+  grid-column: 1 / -1;
+  justify-self: center;
+  background: #313728;
+  color: #fff;
+  font-weight: bold;
+  border: none;
+  border-radius: 5px;
+  padding: 10px 25px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+section form input[type="submit"]:hover {
+  background: #444;
+}
+
+
+
+/* Search Form Styles */
+  /* Search Form Styles (grid version) */
+form.search-main {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr); /* 4 أعمدة: 3 قوائم + زر */
+  gap: 10px;
+  align-items: center;
+  justify-items: center;
+  width: 80%;
+  margin: 30px auto;
+  background: rgba(255, 255, 255, 0.1);
+  border: none;
+  box-shadow: none;
+  padding: 10px;
+}
+
+form.search-main select,
+form.search-main button {
+  width: 100%;
+  padding: 10px 15px;
+  font-size: 16px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  box-sizing: border-box;
+}
+
+form.search-main select {
+  background: #fff;
+}
+
+form.search-main button {
+  background-color: #313728;
+  color: #fff;
+  font-weight: bold;
+  cursor: pointer;
+  border: none;
+}
+
+form.search-main button:hover {
+  background-color: #444;
+}
+
+/* responsive — الجوال يخليها بالطول */
+@media (max-width: 768px) {
+  form.search-main {
+    grid-template-columns: 1fr;
+  }
+}
+
+    /* End of Search Form Styles */
+
+    form.contact-form {
+  display: grid;
+  gap: 15px;
+  background: #fafaf5;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  padding: 30px;
+  width: 60%;
+  margin: 40px auto;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+form.contact-form label {
+  font-weight: bold;
+  color: #313728;
+}
+
+form.contact-form input,
+form.contact-form textarea {
+  width: 100%;
+  padding: 10px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  font-size: 16px;
+  box-sizing: border-box;
+}
+
+form.contact-form button {
+  background-color: #313728;
+  color: #fff;
+  font-weight: bold;
+  border: none;
+  border-radius: 5px;
+  padding: 10px 25px;
+  cursor: pointer;
+}
+
+form.contact-form button:hover {
+  background-color: #444;
+}
+
+
+
+ <section class="container split-reverse">
+        <section class="Rightaside">
+            <h3>just trying for now</h3>
+            <p> <em>Eating out can be expensive, but with a little planning, you can enjoy delicious meals without
+                    breaking the bank.</em></p>
+        </section>
+
+
+        <aside class="LeftSection">
+            <img src="img/food1.jpg" alt="sidePhoto" class="LeftSidePhoto" title="i'm Hungry ahh">
+        </aside>
+    </section> 
+
+
+
+<section class="container split-reverse">
+        <section class="LeftSection">
+            <img src="img/food2.jpg" alt="sidePhoto" class="RightSidePhoto" title="i'm Hungry ahh">
+        </section>
+
+
+        <aside class="Rightaside">
+           <h3>just trying for now</h3>
+            <p> <em>Eating out can be expensive, but with a little planning, you can enjoy delicious meals without
+                    breaking the bank. Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquid vel ipsum quo.
+                    Harum repudiandae placeat est quae, et tenetur, autem vero neque quos fugit tempora maiores
+                    blanditiis architecto cumque ex.</em></p>
+        </aside>
+    </section>
+
+
+
+
+
+
+    <!DOCTYPE html>
+<html lang="en-us">
+<head>
+  <meta charset="UTF-8">
+  <title>Browse Restaurants</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- Same font + styles as your home page -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" type="text/css" href="styles/style.css">
+  <link rel="icon" type="image/png" href="https://raw.githubusercontent.com/Abdullah-ghilan/My-new-repo/main/Assignment32/img/favicon-Hamburger.png">
+</head>
+
+<body>
+  <header id="main-header">
+    <h1>Browse Restaurants</h1>
+
+    <!-- Hamburger toggle (one copy only) -->
+    <input type="checkbox" id="menu-toggle">
+    <label for="menu-toggle" class="hamburger">
+      <span></span><span></span><span></span>
+    </label>
+
+    <!-- Top navbar -->
+    <nav id="navbar" aria-label="Primary">
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a aria-current="page" href="Browse-Restaurants.html">Browse Restaurants</a></li>
+        <li><a href="Reviews.html">Reviews</a></li>
+        <li><a href="top-picks.html">Top Picks</a></li>
+        <li><a href="About.html">About</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- Mobile slide-out menu -->
+  <nav class="menu" aria-label="Mobile">
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a aria-current="page" href="Browse-Restaurants.html">Browse Restaurants</a></li>
+      <li><a href="Reviews.html">Reviews</a></li>
+      <li><a href="top-picks.html">Top Picks</a></li>
+      <li><a href="About.html">About</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+  </nav>
+
+  <main>
+    <!-- Intro -->
+    <section class="container">
+      <h2>Find your next meal destination</h2>
+      <p><em>Set your budget, pick your vibe, and go eat happy.</em> We’ve curated a handful of popular spots to get you started—cozy cafés, street tacos, ramen bowls, and wood-fired pizza.</p>
+    </section>
+
+    <!-- Spotlight #1 -->
+    <section class="container split" aria-label="Spotlight Nonna’s Kitchen">
+      <section class="LeftSection">
+        <h3>Nonna’s Kitchen — Handmade & Wood-Fired</h3>
+        <p><em>Comfort Italian with handmade pasta and crispy-edge pizza. Warm lights, great music, and generous portions.</em></p>
+        <p><strong>Budget:</strong> $15–$20 • <strong>Type:</strong> Italian • <strong>Location:</strong> Amsterdam</p>
+      </section>
+      <aside class="Rightaside">
+        <img src="img/food2.jpg" alt="Nonna’s Kitchen wood-fired pizza" class="RightSidePhoto" loading="lazy">
+      </aside>
+    </section>
+
+    <!-- Spotlight #2 (reverse) -->
+    <section class="container split-reverse" aria-label="Spotlight El Barrio">
+      <aside class="Leftaside">
+        <img src="img/food1.jpg" alt="El Barrio street tacos" class="LeftSidePhoto" loading="lazy">
+      </aside>
+      <section class="RightSection">
+        <h3>El Barrio — Street Tacos & Salsas</h3>
+        <p><em>Smoky carne asada, fresh pico, and tortillas made in-house. Late-night vibes with a quick bite under $15.</em></p>
+        <p><strong>Budget:</strong> $10–$15 • <strong>Type:</strong> Mexican • <strong>Location:</strong> Rotterdam</p>
+      </section>
+    </section>
+
+    <!-- Spotlight #3 -->
+    <section class="container split" aria-label="Spotlight Noodle Craft">
+      <section class="LeftSection">
+        <h3>Noodle Craft — Ramen & Wok Bowls</h3>
+        <p><em>Umami-rich broths, springy noodles, and crunchy toppings. Cozy corner for a fast, affordable bowl.</em></p>
+        <p><strong>Budget:</strong> $5–$10 • <strong>Type:</strong> Asian • <strong>Location:</strong> Utrecht</p>
+      </section>
+      <aside class="Rightaside">
+        <img src="img/food2.jpg" alt="Noodle Craft ramen bowl" class="RightSidePhoto" loading="lazy">
+      </aside>
+    </section>
+
+    <!-- Top deals table using your .prices style -->
+    <section class="container" aria-label="Top Deals">
+      <h3>Top Deals Today</h3>
+      <table class="prices">
+        <thead>
+          <tr>
+            <th>Restaurant</th>
+            <th>Cuisine</th>
+            <th>Budget</th>
+            <th>Location</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Nonna’s Kitchen</td>
+            <td>Italian</td>
+            <td>$15–$20</td>
+            <td>Amsterdam</td>
+          </tr>
+          <tr>
+            <td>El Barrio</td>
+            <td>Mexican</td>
+            <td>$10–$15</td>
+            <td>Rotterdam</td>
+          </tr>
+          <tr>
+            <td>Noodle Craft</td>
+            <td>Asian</td>
+            <td>$5–$10</td>
+            <td>Utrecht</td>
+          </tr>
+          <tr>
+            <td>Cedar &amp; Spice</td>
+            <td>Middle Eastern</td>
+            <td>$8–$15</td>
+            <td>Den Haag</td>
+          </tr>
+          <tr>
+            <td>Masala House</td>
+            <td>Indian</td>
+            <td>$10–$20</td>
+            <td>Haarlem</td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+
+    <!-- Filter bar (reusing your form) -->
+    <form class="search-main" aria-label="Filter restaurants">
+      <select name="budget" aria-label="Budget">
+        <option value="">Select Budget</option>
+        <option value="5-10">$5 - $10</option>
+        <option value="10-15">$10 - $15</option>
+        <option value="15-20">$15 - $20</option>
+        <option value="20-25">$20 - $25</option>
+        <option value="25-30">$25 - $30</option>
+      </select>
+
+      <select name="cuisine" aria-label="Cuisine">
+        <option value="">Select type</option>
+        <option value="italian">Italian</option>
+        <option value="mexican">Mexican</option>
+        <option value="asian">Asian</option>
+        <option value="middle-eastern">Middle Eastern</option>
+        <option value="indian">Indian</option>
+        <option value="coffee">Coffee</option>
+        <option value="sweets">Sweets</option>
+      </select>
+
+      <select name="location" aria-label="Location">
+        <option value="">Select Location</option>
+        <option value="Amsterdam">Amsterdam</option>
+        <option value="Den Haag">Den Haag</option>
+        <option value="Haarlem">Haarlem</option>
+        <option value="Rotterdam">Rotterdam</option>
+        <option value="Utrecht">Utrecht</option>
+        <option value="Zandvoort">Zandvoort</option>
+      </select>
+
+      <button type="submit">Search</button>
+    </form>
+
+    <!-- Light category block -->
+    <section class="container food-list-container" aria-label="Popular now">
+      <p>Popular now</p>
+      <ul class="ul">
+        <li>Wood-Fired Pizza</li>
+        <li>Street Tacos</li>
+        <li>Ramen Bowls</li>
+        <li>Falafel Wraps</li>
+        <li>Coffee &amp; Desserts</li>
+        <li>Vegan Bowls</li>
+      </ul>
+    </section>
+
+    <!-- Small editorial block using your article/figure styles -->
+    <article>
+      <figure class="figure">
+        <img src="img/food1.jpg" alt="Close-up of a dessert plate" class="center-img" loading="lazy">
+        <figcaption>Eat smart, spend less.</figcaption>
+      </figure>
+      <p>We highlight spots with great value, solid reviews, and consistent quality. Use the filters to refine by budget, cuisine, and location.</p>
+    </article>
+  </main>
+
+  <footer id="main-footer">
+    &copy; All Rights Reserved 2001.
+  </footer>
+
+  <!-- Cookies banner (optional) -->
+  <input type="checkbox" id="cookies-toggle" hidden>
+  <section id="cookies-banner" aria-live="polite">
+    We use cookies to improve your experience.
+    <label for="cookies-toggle" id="cookies-ok">OK</label>
+  </section>
+</body>
+</html>

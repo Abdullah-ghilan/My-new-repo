@@ -1,0 +1,1747 @@
+:root{
+	--container: min(1200px, 92vw);
+	--line: #e5e7eb;
+	--brand-color:#313728;
+	--serif: "Playfair Display", ui-serif, Georgia, serif;
+	--sans: "Roboto", system-ui,  Arial, sans-serif;
+}
+
+body {
+	font-size: 16px;
+	font-family: "Roboto", sans-serif;
+	background-color: #ffffff;
+	line-height: 1.6em;
+	margin: 0;
+}
+
+.kicker {
+	font-family: var(--sans);
+	font-weight: 600;
+	font-size: 0.9rem;
+	letter-spacing: .08em;
+	text-transform: uppercase;
+	color: #6b7280;
+	margin: 0 0 8px;
+} 
+
+.hero{
+	padding: clamp(32px, 6vw, 80px) 0;
+	text-align: center;
+}
+
+ 
+
+ 
+
+ .hero-quote{
+	font-family: var(--serif);
+	font-weight: 500;               
+	font-size: clamp(2rem, 5.5vw, 4.5rem);
+	line-height: 1.12;
+	letter-spacing: -0.01em;
+	color: #111827;
+	margin: 0 auto;
+	width: min(1100px, 92vw);         
+}
+
+.hero-sub{
+	font-family: var(--sans);
+	color: #4b5563;
+	font-size: clamp(1rem, 1.4vw, 1.125rem);
+	margin: 12px auto 0;
+	width: min(800px, 92vw);
+}
+
+
+.display-title {
+	font-family: var(--serif);
+	font-weight: 600;
+	font-size: clamp(2rem, 5vw, 3rem);
+	line-height: 1.1;
+	letter-spacing: -0.01em;
+	color: #0f172a;
+	margin: 0 0 12px;
+}
+
+/* البرغراف */
+.display-lead {
+	font-family: var(--sans);
+	font-size: clamp(1rem, 1.2vw, 1.125rem);
+	color: #374151;
+	margin: 0;
+	max-width: 60ch;
+	text-indent: 1em;     
+	word-spacing: .05em; 
+
+}
+
+.display-lead::first-letter {
+	font-size: 140%;
+	font-weight: 700;
+	color: #313728;
+}
+
+
+
+
+
+
+
+.navbar{
+	position: sticky; top:0; z-index:1000;
+	display: grid;
+	grid-template-columns: auto 1fr auto; /* brand | links | cta */
+	gap: 12px;
+	align-items: center;
+	padding: 10px 16px;
+	background:#fff;
+	border-bottom: 1px solid var(--line);
+}
+
+.navbar .brand{
+	display: grid;
+	grid-auto-flow: column;
+	align-items: center;
+	gap: 10px;
+	text-decoration: none;
+	color: inherit;
+}
+
+.navbar .logo{
+	width: 40px; height: 40px; object-fit: cover;
+	border-radius: 10px;
+	border: 1px solid rgba(0,0,0,.12);
+	background:#fff;
+}
+
+.navbar .brand-name{
+	font-weight: 800;
+	font-size: clamp(1rem, 2vw, 1.25rem);
+	color: var(--brand-color);
+}
+
+/* الروابط في الوسط (مثل الموقع اللي بالصورة) */
+.navbar .primary ul{
+	display: grid;
+	grid-auto-flow: column;
+	gap: 18px;
+	list-style: none;
+	margin: 0; padding: 0;
+	justify-content: center; 
+}
+.navbar .primary a{
+	text-decoration: none;
+	font-weight: 700;
+	color: #222;
+	padding: 8px 10px;
+	border-radius: 8px;
+}
+.navbar .primary a:hover,
+.navbar .primary a:focus{
+	background: #f5f5f5;
+	outline: 2px solid transparent;
+}
+
+/* زر على اليمين (اختياري) */
+.navbar .cta{
+	justify-self: end;
+	text-decoration: none;
+	padding: 10px 14px;
+	border-radius: 10px;
+	font-weight: 800;
+	background: #2563eb;
+	color: #fff;
+	border: 1px solid #1e50c3;
+}
+.navbar .cta:hover{ filter: brightness(0.95); }
+
+/* توحيد العرض عبر الصفحات */
+.container{ width: var(--container); margin-inline:auto; }
+body{ font-size: clamp(16px, 1.6vw, 18px); }
+
+
+/* #main-header {
+	background-color: rgb(139, 139, 124);
+	color: #333;
+	letter-spacing: 1px;
+	text-indent: 1em;
+	word-spacing: 0.5em;
+	text-transform: uppercase;
+	text-align: center;
+	position: relative;
+} */
+
+/* #main-header{
+	position: sticky; top:0; z-index: 1000;
+	background: #ffffff;
+	border-bottom: 1px solid var(--line);
+	display: grid;
+	grid-template-columns: 1fr auto;
+	align-items: center;
+	padding: 8px 12px;
+	text-transform: none;
+}
+#main-header .site-title{ margin:0; font-size: clamp(1.1rem, 2.5vw, 1.6rem); color:#313728 }
+#main-header .logo{ width:40px; height:40px; border-radius:10px; border:1px solid rgba(0,0,0,.12); object-fit:cover; background:#fff }
+
+#main-header h1 {
+	margin: 0;
+	padding: 16px 0;
+}
+
+#navbar {
+	background-color: #313728;
+	color: white;
+}
+
+#navbar ul {
+	list-style-type: none;
+	padding: 15px;
+	text-align: center;
+	 
+	transition: 0.3s;
+}
+
+#navbar li {
+	display: inline;
+	margin: 20px;
+}
+
+#navbar a {
+	text-decoration: none;
+	color: white;
+	font-size: 20px;
+	font-weight: bold;
+}
+
+#navbar > ul > li > a {
+	padding: 7px 20px;
+	border-radius: 5px;
+} */
+
+
+
+
+
+
+#navbar a:active {
+	background-color: #000000;
+}
+
+#navbar a:hover {
+	color: #cfe8a9;
+	background-color: #444;
+}
+
+.navbar .primary a:visited { opacity: .95; }
+.navbar .primary a:active { transform: translateY(1px); }
+
+
+#showcase {
+	background-image: url('../img/coffee\ and\ desssert.jpg');
+	;
+	background-position: center right;
+	min-height: 300px;
+	margin-bottom: 30px;
+	text-align: center;
+	position: relative;
+	/*align-items: center;*/
+}
+
+
+
+#showcase h2 {
+	color: rgb(255, 255, 255);
+	font-size: 50px;
+	line-height: 1.6em;
+	padding-top: 30px;
+	text-shadow: #333 5px 5px 7px;
+	position: relative;
+}
+
+#showcase p {
+	color: rgb(255, 255, 255);
+	font-size: 20px;
+	text-shadow: #333 5px 5px 7px;
+	position: relative;
+}
+
+/*.LeftSection {
+	float: left;
+	width: 70%;
+	padding: 0 30px;
+	box-sizing: border-box;
+}
+
+.RightSection {
+	float: right;
+	width: 70%;
+	padding: 0 30px;
+	box-sizing: border-box;
+}*/
+.float-right {
+	float: right;
+	margin: 0 0 8px 12px;
+	width: min(40%, 240px);
+}
+@media (max-width: 768px){
+	.float-right { float: none; width: 100%; margin: 8px 0; }
+}
+
+
+.LeftSection,
+.RightSection{
+	/* background: #ffffff;
+	border: 1px solid var(--line);
+	border-radius: var(--radius); */
+	box-shadow: 0 6px 18px rgba(0,0,0,.06);
+}
+
+/*.Rightaside {
+	float: right;
+	width: 30%;
+	background: #333;
+	color: #fff;
+	padding: 10px;
+	box-sizing: border-box;
+	background: none;
+	padding: 0;
+}
+
+.Leftaside {
+	float: left;
+	width: 30%;
+	background: #333;
+	color: #fff;
+	padding: 10px;
+	box-sizing: border-box;
+	background: none;
+	padding: 0;
+}*/
+
+/* ========= Sections / Asides ========= */
+/* .LeftSection p::first-letter,
+.RightSection p::first-letter {
+	font-size: 150%;
+	color: #313728;
+	font-weight: bold;
+} */
+
+.LeftSection,
+.RightSection {
+	display: grid;
+	gap: .6rem;
+	/* background: color-mix(in oklab, var(--card), transparent 12%);
+	border: 1px solid var(--line);
+	border-radius: 18px; */
+	padding: 1rem 1.2rem;
+}
+
+.Rightaside,
+.Leftaside {
+	display: grid;
+	background: transparent;
+	padding: 0;
+}
+
+/* new Grids */
+/* ========= Containers & Splits (Grid only) ========= */
+/* container عادية */
+/* .container {
+	width: 80%;
+	margin: auto;
+} */
+
+.container.split {
+	display: grid;
+	grid-template-columns: 2fr 1fr;
+	align-items: start;
+	gap: 20px;
+	margin: auto;
+	padding: 10px;
+}
+
+/* قلب الأعمدة بإضافة reverse */
+.container.split-reverse {
+	display: grid;
+	grid-template-columns: 1fr 2fr;
+	align-items: start;
+	gap: 20px;
+	 margin: auto;
+	 padding: 30px;
+}
+
+/* حواف داخلية لعناصر العمودين */
+.container.split > section,
+.container.split > aside {
+	padding: 10px;
+	box-sizing: border-box;
+}
+
+/* end of new Grids */
+
+/* ===== Testimonials Section Background ===== */
+.testimonials-section {
+	background-color: #f5f4f1;  
+	padding: 60px 0;           
+	border-top: 1px solid #eee;
+	border-bottom: 1px solid #eee;
+}
+
+
+article {
+	display: grid;
+	justify-items: center;
+	align-items: center;
+	gap: 10px;
+	margin: 20px auto;
+	text-align: center;
+}
+
+/* nth-child*/
+.prices {
+	border-collapse: collapse;
+	width: 60%;
+	margin: 40px auto;
+	text-align: center;
+	font-size: 18px;
+	border-radius: 10px;
+	overflow: hidden;
+	box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+}
+
+.prices th {
+	background-color: #444;
+	color: #e8d2a9;
+	text-transform: uppercase;
+	padding: 12px;
+}
+
+.prices td {
+	padding: 10px;
+	color: #333;
+}
+
+/* odd rows */
+.prices tr:nth-child(odd) {
+	background: #FFF;
+}
+
+/* even rows */
+.prices tr:nth-child(even) {
+	/* background: #a16d3d; */
+	background: #cff;
+}
+
+.prices tr:hover {
+	background-color: #eaeae0;
+}
+
+
+
+/*end of nth-child*/
+
+/* قسم "What is the food you like */
+.food-list-container {
+	display: grid;
+	grid-template-columns: 30% 70%;
+	align-items: start;
+	gap: 20px;
+	background: #fafaf5;
+	border: 1px solid #ddd;
+	border-radius: 10px;
+	padding: 20px;
+	box-shadow: 0 1px 6px rgba(0, 0, 0, 0.1);
+	margin: 40px auto;
+	width: 80%;
+}
+
+.food-list-container p {
+	text-align: right;
+	font-weight: bold;
+	color: #313728;
+	font-size: 20px;
+}
+
+.food-list-container .ul {
+	list-style-type: square;
+	margin: 0;
+	padding-left: 20px;
+}
+
+section form {
+	display: grid;
+	grid-template-rows: auto 1fr;
+	justify-items: center;
+	background: #f8f8f5;
+	border: 1px solid #ccc;
+	border-radius: 10px;
+	padding: 25px 30px;
+	width: 70%;
+	margin: 40px auto;
+	box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+section form fieldset {
+	display: grid;
+	grid-template-columns: 1fr 2fr;
+	gap: 15px 20px;
+	width: 100%;
+	border: none;
+}
+
+section form legend {
+	grid-column: 1 / -1;
+	text-align: center;
+	font-size: 1.3em;
+	font-weight: bold;
+	color: #313728;
+	margin-bottom: 15px;
+}
+
+section form label {
+	color: #313728;
+	font-weight: 500;
+}
+
+section form input[type="text"],
+section form input[type="email"],
+section form select {
+	width: 100%;
+	padding: 10px;
+	border-radius: 6px;
+	border: 1px solid #aaa;
+	font-size: 16px;
+	box-sizing: border-box;
+}
+
+section form input[type="submit"] {
+	grid-column: 1 / -1;
+	justify-self: center;
+	background: #313728;
+	color: #fff;
+	font-weight: bold;
+	border: none;
+	border-radius: 5px;
+	padding: 10px 25px;
+	cursor: pointer;
+	transition: 0.3s;
+}
+
+section form input[type="submit"]:hover {
+	background: #444;
+}
+
+/* Search Form Styles */
+/* ========= Search Form (Grid) ========= */
+form.search-main {
+	display: grid;
+	grid-template-columns: repeat(4, 1fr); /* 4 أعمدة: 3 قوائم + زر */
+	gap: 10px;
+	align-items: center;
+	justify-items: center;
+	width: min(1100px, 90%);
+	margin: 18px auto 0;
+	background: rgba(255, 255, 255, 0.1);
+		backdrop-filter: blur(2px);
+	 border: 1px solid rgba(255,255,255,.25);
+	border-radius: var(--radius);
+	box-shadow: none;
+	padding: 10px;
+}
+
+form.search-main select,
+form.search-main button {
+	width: 100%;
+	padding: 10px 12px;
+	font-size: 16px;
+	border-radius: 8px;
+	border: 1px solid #ccc;
+	box-sizing: border-box;
+	
+}
+
+form.search-main select {
+	background: #fff;
+}
+
+form.search-main button {
+	background-color: #313728;
+	color: #fff;
+	font-weight: bold;
+	cursor: pointer;
+	border: none;
+}
+
+form.search-main button:hover {
+	background-color: #444;
+}
+
+/* End of Search Form Styles */
+
+form.contact-form {
+	display: grid;
+	gap: 15px;
+	background: #fafaf5;
+	border: 1px solid #ddd;
+	border-radius: 10px;
+	padding: 30px;
+	width: 60%;
+	margin: 40px auto;
+	box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+form.contact-form label {
+	font-weight: bold;
+	color: #313728;
+}
+
+form.contact-form input,
+form.contact-form textarea {
+	width: 100%;
+	padding: 10px;
+	border-radius: 5px;
+	border: 1px solid #ccc;
+	font-size: 16px;
+	box-sizing: border-box;
+}
+
+form.contact-form button {
+	background-color: #313728;
+	color: #fff;
+	font-weight: bold;
+	border: none;
+	border-radius: 5px;
+	padding: 10px 25px;
+	cursor: pointer;
+}
+
+form.contact-form button:hover {
+	background-color: #444;
+}
+
+/* Classes for img */
+/* ========= Media / Figures ========= */
+.RightSidePhoto,
+.LeftSidePhoto {
+	display: block;
+	inline-size: 100%;
+	block-size: auto;
+	height: auto;
+	border-radius: 10px;
+	object-fit: cover;
+		border: 1px solid #ddd;
+	border-color: #333;
+	border-style: solid;
+}
+
+.center-img {
+	display: block;
+	margin-inline: auto;
+	width: 250px;
+	height: auto;
+}
+
+/*.left-img {
+	float: left;
+	width: auto;
+	height: auto;
+}*/
+
+/* Classes for figure and figcaption */
+.figure {
+	text-align: center;
+	/* centers the caption text */
+	margin: 20px auto;
+	/* centers the whole figure block */
+	width: fit-content;
+	border-color: #333;
+	border-style: solid;
+	border-width: 2px;
+}
+
+.figure figcaption {
+	font-size: 18px;
+	font-style: italic;
+	margin-top: 10px;
+}
+
+/* end of Classes for figure and figcaption */
+
+#main-footer {
+	background-color: #333;
+	color: #fff;
+	text-align: center;
+	padding: 60px 20px;
+	margin-top: 40px;
+		font-size: 1rem; 
+
+}
+
+hr.divider {
+	border: 0;
+	height: 1px;
+	background: #333;
+	margin: 40px 0;
+}
+
+/* اخفاء الـ checkbox */
+#menu-toggle {
+	display: none;
+}
+
+/* شكل زر الهامبرغر */
+.hamburger {
+	position: relative;
+	display: inline-block;
+	width: 30px;
+	height: 20px;
+	cursor: pointer;
+	margin: 15px;
+	z-index: 1001;
+}
+
+.hamburger span {
+	position: absolute;
+	left: 0;
+	right: 0;
+	height: 3px;
+	background-color: #000;
+	 transition: transform .2s ease, opacity .2s ease;
+	/* لون الخطوط */
+}
+
+.hamburger span:nth-child(1) {
+	top: 0;
+}
+
+.hamburger span:nth-child(2) {
+	top: 9px;
+}
+
+.hamburger span:nth-child(3) {
+	bottom: 0;
+}
+
+/* ستايل القائمة */
+.menu {
+	position: absolute;
+	top: 0;
+	right: -300px;
+	/* مخفية باليمين */
+	width: 300px;
+	height: 100%;
+	background-color: #313728;
+	color: #fff;
+	transition: right 0.3s ease;
+	z-index: 1000;
+}
+
+.menu ul {
+	list-style-type: none;
+	padding: 0;
+	margin: 0;
+}
+
+.menu li {
+	padding: 12px;
+}
+
+.menu li a {
+	color: #fff;
+	text-decoration: none;
+	;
+}
+
+/* اظهار القائمة لما يكون الشيكبوكس مفعل */
+#menu-toggle:checked ~ .menu {
+	right: 0;
+}
+
+#cookies-banner {
+	position: fixed;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	background: #4b2e05;
+	color: #fff3e0;
+	display: grid;
+	grid-template-columns: 1fr auto;
+	gap: .5rem;
+	align-items: center;
+	padding: .75rem 1rem;
+	z-index: 9999;
+	transition: transform 0.3s ease;
+}
+
+#cookies-ok {
+	 background: #d7b899;
+	color: #3b1e08;
+	padding: .45rem .9rem;
+	border-radius: 8px;
+	font-weight: 700;
+	cursor: pointer;
+}
+
+
+#cookies-toggle:checked + #cookies-banner {
+	transform: translateY(100%);
+}
+
+
+
+
+
+
+/* ====== Browse Restaurants page ====== */
+/* ====== Browse Restaurants page ====== */
+/* ====== Browse Restaurants page ====== */
+/* ====== Browse Restaurants page ====== */
+
+/* ---- Header ---- */
+
+
+/* ---- Filter bar wrapper (reuses your .search-main inside) ---- */
+
+.page-browse .filter-wrap {
+	width: 100%;
+	display: grid;
+	justify-items: center;
+	padding: 4px 0 14px;
+}
+
+/* ---- Cards grid ---- */
+.page-browse .card-grid {
+	width: min(1100px, 90%);
+	margin: 14px auto 30px;
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+	gap: 16px;
+}
+
+.page-browse .card {
+	display: grid;
+	grid-template-rows: auto auto 1fr auto;
+	gap: 10px;
+	background: #fff;
+	border: 1px solid #e7e7e7;
+	border-radius: 12px;
+	box-shadow: 0 2px 8px rgba(0,0,0,.06);
+	padding: 12px;
+	transition: transform .15s ease, box-shadow .15s ease;
+}
+
+.page-browse .card:hover {
+	transform: translateY(-2px);
+	box-shadow: 0 6px 16px rgba(0,0,0,.10);
+}
+
+.page-browse .card figure {
+	margin: 0;
+}
+
+.page-browse .card img {
+	width: 100%;
+	aspect-ratio: 4 / 3;
+	object-fit: cover;
+	border-radius: 8px;
+	border: 1px solid #ddd;
+}
+
+.page-browse .card h3 {
+	margin: 4px 0 0;
+	font-size: 18px;
+	color: #222;
+}
+
+.page-browse .card p {
+	margin: 6px 0 0;
+	color: #555;
+	font-size: 14px;
+}
+
+.page-browse .meta {
+	margin: 8px 0 0;
+	display: grid;
+	gap: 6px;
+	font-size: 13px;
+	color: #333;
+}
+
+.page-browse .chip {
+	display: inline-grid;
+	align-items: center;
+	justify-content: center;
+	padding: 4px 10px;
+	border: 1px solid #ddd;
+	border-radius: 999px;
+	font-size: 12px;
+	background: #fafafa;
+}
+
+.page-browse .actions {
+	margin-top: 10px;
+	display: grid;
+	grid-auto-flow: column;
+	gap: 8px;
+	justify-content: start;
+}
+
+.page-browse .btn {
+	display: inline-grid;
+	place-items: center;
+	padding: 8px 12px;
+	border-radius: 8px;
+	border: 1px solid #313728;
+	background: #313728;
+	color: #fff;
+	text-decoration: none;
+	font-weight: 600;
+	font-size: 13px;
+	transition: background .2s ease, color .2s ease, border-color .2s ease;
+}
+
+.page-browse .btn.secondary {
+	background: transparent;
+	color: #313728;
+}
+
+.page-browse .btn:hover {
+	background: #444;
+	border-color: #444;
+}
+
+.page-browse .btn.secondary:hover {
+	background: #313728;
+	color: #fff;
+}
+
+/* ---- Section headings inside .container ---- */
+.page-browse .container h3.section-title {
+	margin: 18px 0 8px;
+	font-size: 20px;
+	color: #222;
+	text-align: center;
+}
+
+/* ---- Footer spacing ---- */
+.page-browse #main-footer {
+	margin-top: 34px;
+}
+
+/* link */
+a:focus{
+	outline: 2px solid #cfe8a9;
+	outline-offset: 2px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* =========================================================*/
+
+/* insta button */
+#instagram-button {
+	position: fixed;
+	bottom: 20px;
+	right: 20px;
+	width: 50px;
+	height: 50px;
+	z-index: 2000;
+}
+
+#instagram-button img {
+	width: 100%;
+	height: auto;
+	border-radius: 50%;
+	box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+	transition: transform 0.3s;
+}
+
+#instagram-button img:hover {
+	transform: scale(1.1);
+	/* تكبر شوي عند المرور */
+}
+
+/* End of insta button */
+
+
+
+
+/* ====================== MEDIA QUERIES (moved to the end as-is) ====================== */
+
+@media (max-width: 768px) {
+	.container.split,
+	.container.split-reverse {
+		grid-template-columns: 1fr;
+	}
+	 form.search-main {
+		grid-template-columns: 1fr;
+	}
+	 #main,
+	#aside {
+		width: 100%;
+		float: none;
+	}
+
+	#showcase h2 {
+		font-size: 30px;
+	}
+	.navbar .primary{ display: none; }
+	 .float-right { float: none; width: 100%; margin: 8px 0; }
+}
+
+
+
+@media (min-width: 768px) {
+	.hamburger {
+		display: none;
+	}
+
+	.menu {
+		position: static;
+		width: auto;
+		height: auto;
+		background: transparent;
+		right: auto;
+		transition: none;
+	}
+
+	.menu ul {
+		display: flex;
+		justify-content: center;
+		margin: 0;
+	}
+
+	.menu li {
+		padding: 0 15px;
+	}
+
+	.menu li a {
+		color: #fff;
+		font-weight: bold;
+	}
+}
+
+@media (max-width: 768px) {
+	.container.split,
+	.container.split-reverse {
+		grid-template-columns: 1fr;   /* عمود واحد */
+	}
+
+	/* ثبّت الترتيب: النص أولاً ثم الصورة */
+	.container.split > section,
+	.container.split-reverse > section {
+		grid-column: 1;
+		grid-row: 1;   /* النص دائماً في الصف الأول */
+	}
+
+	.container.split > aside,
+	.container.split-reverse > aside {
+		grid-column: 1;
+		grid-row: 2;   /* الصورة دائماً في الصف الثاني */
+	}
+}
+/* ====================== END OF MEDIA QUERIES ====================== */
+
+
+/* reviews page */
+/* =========================================================*/
+/* ====== CREATIVE REVIEWS PAGE STYLES ====== */
+/* =========================================================*/
+
+/* 1. Showcase Adjustment */
+.reviews-showcase {
+		background-position: center bottom;
+		min-height: 250px;
+}
+
+/* 2. Main Title */
+.reviews-main .section-title {
+		margin: 35px auto 25px;
+		font-size: clamp(1.8rem, 4vw, 2.2rem); /* Responsive font size */
+		color: #313728;
+		text-align: center;
+		border-bottom: 4px solid #cfe8a9; /* Stronger highlight with your light color */
+		padding-bottom: 10px;
+		display: block;
+		width: fit-content;
+		font-weight: 900;
+}
+
+/* 3. Reviews Grid Container */
+.reviews-grid {
+		display: grid;
+		/* Three columns on large screens, automatically wrapping */
+		grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+		gap: 25px;
+		margin-bottom: 40px;
+}
+
+/* 4. Individual Review Card Style */
+.review-card {
+		background: #fff;
+		border: 1px solid var(--line);
+		border-radius: var(--radius);
+		box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08); /* More prominent shadow */
+		padding: 25px;
+		display: grid;
+		grid-template-rows: auto 1fr auto; /* Header, Text, Footer */
+		gap: 15px;
+		position: relative;
+		transition: transform 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94), box-shadow 0.3s ease; /* Smooth hover */
+}
+
+.review-card:hover {
+		transform: translateY(-8px); /* Deeper lift on hover */
+		box-shadow: 0 15px 30px rgba(0, 0, 0, 0.12);
+}
+
+/* 5. Review Header (Restaurant Name & Stars) */
+.review-header {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		border-bottom: 3px solid #f0f0f0; /* Separator line */
+		padding-bottom: 12px;
+}
+
+.restaurant-name {
+		margin: 0;
+		font-size: 1.25em;
+		color: #313728;
+		font-weight: 700;
+}
+
+.rating-stars {
+		font-size: 1.2em;
+		margin: 0;
+}
+
+/* 6. Review Text */
+.review-text {
+		font-style: italic;
+		color: #444;
+		line-height: 1.6;
+		margin: 0;
+		position: relative;
+		padding-top: 15px;
+}
+
+/* Creative touch: Quotation mark (pseudo-element) */
+.review-text::before {
+		content: "“";
+		position: absolute;
+		top: 0;
+		left: -15px;
+		font-size: 4em;
+		color: rgba(49, 55, 40, 0.1); /* Transparent dark color */
+		line-height: 0.1;
+		z-index: 0;
+}
+
+/* 7. Footer Meta Info */
+.review-meta {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		font-size: 0.9em;
+		color: #888;
+		margin-top: auto;
+		padding-top: 10px;
+		border-top: 1px dashed #e0e0e0;
+}
+
+.review-meta p {
+		margin: 0;
+}
+
+/* 8. Differentiating Cards based on Rating (using helper classes from HTML) */
+
+/* 5-Star Reviews */
+.review-card.stars-5 {
+		border: 2px solid #313728; /* Solid border with your dark color */
+		background: #fcfcfc;
+}
+.review-card.stars-5 .restaurant-name {
+		color: #313728;
+}
+
+/* 4-Star Reviews */
+.review-card.stars-4 {
+		border: 2px solid #cfe8a9; /* Solid border with your light color */
+}
+
+/* 3-Star Reviews */
+.review-card.stars-3 {
+		border: 1px solid #ddd;
+		opacity: 0.85; /* Slightly muted */
+}
+
+/* 9. Action Buttons (Reusing your styles) */
+.action-buttons {
+		display: flex;
+		justify-content: center;
+		gap: 20px;
+		margin-top: 30px;
+		margin-bottom: 50px;
+}
+
+/* 10. Media Query for Mobile Responsiveness */
+@media (max-width: 768px) {
+		.reviews-grid {
+				grid-template-columns: 1fr;
+				gap: 20px;
+		}
+		.action-buttons {
+				flex-direction: column;
+				gap: 15px;
+		}
+		.review-text::before {
+				left: 5px; /* Adjust quote position for smaller screens */
+				font-size: 3em;
+		}
+}
+
+/* top picks page */
+/* =========================================================*/
+/* ====== TOP PICKS PAGE STYLES (Creative Design) ====== */
+/* =========================================================*/
+
+/* 1. Showcase Adjustment */
+.picks-showcase {
+		background-position: center top;
+		min-height: 250px;
+}
+
+/* 2. Main Title (Reuse from reviews section, slightly customized) */
+.picks-main .section-title {
+		margin: 35px auto 25px;
+		font-size: clamp(1.8rem, 4vw, 2.2rem);
+		color: #313728;
+		text-align: center;
+		border-bottom: 4px solid #313728; /* Using the dark color here for strong emphasis */
+		padding-bottom: 10px;
+		display: block;
+		width: fit-content;
+		font-weight: 900;
+}
+
+/* 3. Picks Grid Container */
+.picks-grid {
+		display: grid;
+		/* Two columns for a bolder look on larger screens */
+		grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+		gap: 30px;
+		margin-bottom: 40px;
+}
+
+/* 4. Individual Pick Card Style */
+.pick-card {
+		background: #ffffff;
+		border: 1px solid var(--line);
+		border-radius: var(--radius);
+		box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+		display: grid;
+		grid-template-rows: auto auto 1fr auto;
+		gap: 15px;
+		overflow: hidden; /* Ensures image corners are rounded */
+		transition: box-shadow 0.3s ease;
+}
+
+.pick-card:hover {
+		box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+}
+
+.pick-card figure {
+		margin: 0;
+		overflow: hidden;
+		height: 250px; /* Fixed height for image uniformity */
+}
+
+.pick-img {
+		width: 100%;
+		height: 100%;
+		object-fit: cover;
+		transition: transform 0.5s ease;
+}
+
+.pick-card:hover .pick-img {
+		transform: scale(1.05); /* Zoom effect on hover */
+}
+
+/* Card Content Area */
+.pick-info {
+		padding: 0 20px;
+		display: grid;
+		grid-template-columns: 1fr auto;
+		align-items: center;
+		gap: 8px 15px;
+}
+
+.pick-card .restaurant-name {
+		grid-column: 1 / span 2;
+		font-size: 1.5em;
+		color: #313728;
+		margin: 0;
+}
+
+.pick-description {
+		padding: 0 20px;
+		margin: 0;
+		color: #555;
+		font-size: 1em;
+}
+
+/* Badge Styling */
+.rating-badge,
+.pick-budget {
+		font-weight: bold;
+		padding: 5px 10px;
+		border-radius: 999px; /* Pill shape */
+		font-size: 0.9em;
+		margin: 0;
+		text-align: center;
+		white-space: nowrap;
+}
+
+.rating-badge {
+		background-color: #313728; /* Dark base color for ratings */
+		color: #cfe8a9;
+		border: 1px solid #cfe8a9;
+}
+
+.pick-budget {
+		background-color: #cfe8a9; /* Light color for budget focus */
+		color: #313728;
+		border: 1px solid #313728;
+}
+
+/* Link Button at the bottom */
+.pick-link {
+		grid-column: 1 / -1; /* Full width */
+		margin: 15px 20px 20px 20px;
+		padding: 10px 15px;
+		justify-self: center;
+		width: calc(100% - 40px);
+}
+
+/* 5. Color Highlighting based on Cuisine Type */
+.pick-card.italian-pick { border-left: 6px solid #d85757; } /* Reddish tint for Italian */
+.pick-card.asian-pick { border-left: 6px solid #57d87b; } /* Green tint for Asian */
+.pick-card.burger-pick { border-left: 6px solid #d8a657; } /* Brownish tint for Burgers */
+.pick-card.middle-eastern-pick { border-left: 6px solid #577ed8; } /* Blue tint for Middle Eastern */
+
+
+/* 6. Media Query for Mobile Responsiveness */
+@media (max-width: 768px) {
+		.picks-grid {
+				grid-template-columns: 1fr;
+				gap: 25px;
+		}
+		.pick-card figure {
+				height: 200px; /* Slightly smaller image on mobile */
+		}
+		.pick-info {
+				grid-template-columns: 1fr auto;
+				gap: 8px 10px;
+		}
+		.pick-card .restaurant-name {
+				grid-column: 1 / -1;
+		}
+		.rating-badge, .pick-budget {
+				justify-self: start;
+		}
+}
+
+
+/* =========================================================*/
+/* ====== ABOUT & CONTACT PAGE STYLES (Creative Design) ====== */
+/* =========================================================*/
+
+/* --- General Section Title (Reusing the look from Reviews/Picks) --- */
+.about-main .section-title,
+.contact-main-grid .section-title {
+		margin: 35px auto 25px;
+		font-size: clamp(1.8rem, 4vw, 2.2rem);
+		color: #313728;
+		text-align: center;
+		border-bottom: 4px solid #cfe8a9;
+		padding-bottom: 10px;
+		display: block;
+		width: fit-content;
+		font-weight: 900;
+}
+
+/* --- About Page Specifics --- */
+.about-showcase {
+		/* Different background position for variety */
+		background-position: center 80%; 
+}
+
+.about-section {
+		margin-bottom: 40px;
+}
+
+.about-section .LeftSection,
+.about-section .RightSection {
+		/* Cleaner look for the text sections */
+		box-shadow: none;
+		border: none;
+		background: transparent;
+}
+
+/* Team Founder Card Style */
+.team-section {
+		margin: 40px auto;
+		width: 80%;
+		text-align: center;
+}
+
+.founder-card {
+		max-width: 600px;
+		margin: 20px auto;
+		padding: 30px;
+		background: #f8f8f5;
+		border: 1px solid #ddd;
+		border-radius: var(--radius);
+		box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+		display: grid;
+		gap: 15px;
+}
+
+.founder-img {
+		border-radius: 50%; /* Circular image */
+		width: 150px;
+		height: 150px;
+		object-fit: cover;
+		margin: 0 auto 10px;
+		border: 5px solid #313728;
+}
+
+.founder-card figure {
+		border: none; /* Remove figure border */
+}
+
+/* --- Contact Page Specifics --- */
+.contact-showcase {
+		 /* Different background position for variety */
+		background-position: center 20%; 
+}
+
+/* Two-column layout for Contact Page (Info and Form) */
+.contact-main-grid {
+		display: grid;
+		grid-template-columns: 1fr 2fr;
+		gap: 40px;
+		align-items: start;
+		margin-top: 30px;
+}
+
+/* Styling the Contact Info Box */
+.contact-info {
+		padding: 20px;
+		background: #f8f8f5;
+		border: 1px solid #ddd;
+		border-radius: var(--radius);
+		box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+}
+
+.contact-info h3 {
+		text-align: left;
+		border-bottom: 2px solid #313728;
+		padding-bottom: 5px;
+		margin-top: 10px;
+}
+
+.contact-details {
+		list-style: none;
+		padding: 0;
+		margin: 20px 0;
+}
+
+.contact-details li {
+		margin-bottom: 12px;
+		font-size: 1.1em;
+		color: #444;
+}
+
+.contact-details .icon {
+		font-size: 1.2em;
+		margin-right: 10px;
+		color: #313728;
+		font-weight: bold;
+}
+
+.contact-info a {
+		color: #313728;
+		text-decoration: none;
+}
+
+.contact-info a:hover {
+		text-decoration: underline;
+}
+
+.social-links {
+		list-style: none;
+		padding: 0;
+		display: flex;
+		gap: 20px;
+}
+
+/* Reuse the contact form style, but make it fit the grid */
+form.contact-form {
+		width: 100%;
+		margin: 0; /* Remove auto margins */
+}
+
+/* Adjust form inputs to fit the single column */
+form.contact-form label,
+form.contact-form input,
+form.contact-form select,
+form.contact-form textarea,
+form.contact-form button {
+		grid-column: 1 / -1; /* Ensure all elements span the full width of the form's grid */
+}
+
+/* Media Query for Mobile Responsiveness */
+@media (max-width: 900px) {
+		.contact-main-grid {
+				grid-template-columns: 1fr; /* Single column on tablet/mobile */
+				gap: 30px;
+		}
+		.contact-info {
+				order: 2; /* Move info block below the form on mobile */
+		}
+		form.contact-form {
+				order: 1; /* Keep the form on top */
+		}
+		.about-main .section-title,
+		.contact-main-grid .section-title {
+				font-size: 24px;
+		}
+}
+
+/* Featured in  */
+/* ===== Featured in band ===== */
+.featured-band{
+	background: #e0ded7;              /* شبيه بالتظليل الخفيف */
+	border-block: 1px solid #eee;     /* خط علوي/سفلي خفيف */
+	padding: 14px 0;
+}
+
+.featured-band1{
+	background-image: url('../img/coffee\ and\ desssert.jpg');              /* شبيه بالتظليل الخفيف */
+	border-block: 1px solid #eee;     /* خط علوي/سفلي خفيف */
+	padding: 14px 0;
+}
+
+.featured-band .featured-kicker{
+	font-family: var(--sans);
+	letter-spacing: .12em;
+	text-transform: uppercase;
+	color: #6b7280;                   /* رمادي خفيف */
+	font-size: clamp(.7rem, .9vw, .8rem);
+	text-align: center;
+	margin: 0 0 8px;
+}
+
+/* سطر الشعارات */
+.featured-logos{
+	list-style: none;
+	margin: 0;
+	padding: 0;
+	display: grid;
+	grid-auto-flow: column;
+	justify-content: center;          /* توسيط */
+	align-items: center;
+	gap: clamp(30px, 6vw, 90px);
+}
+
+ .featured-logos li{
+	display: grid;
+	place-items: center;
+}
+
+ .featured-logos img{
+	height: clamp(28px, 4vw, 60px);
+	width: auto;
+	filter: grayscale(100%) contrast(95%) brightness(96%); /* مونوكروم لطيف */
+	opacity: .9;
+	transition: filter .2s ease, opacity .2s ease, transform .2s ease;
+}
+
+ .featured-logos a:hover img,
+.featured-logos a:focus img{
+	opacity: 1;
+	filter: grayscale(0%);
+	transform: translateY(-1px);
+	outline: none;
+}
+
+ @media (max-width: 640px){
+	.featured-logos{
+		grid-auto-flow: row;
+		grid-template-columns: repeat(3, minmax(0, 1fr));  
+		row-gap: 14px;
+	}
+}
+
+/* ====== FAQ Section ====== */
+.faq-section {
+	margin: 80px auto;
+	padding: 40px 0;
+	border-top: 1px solid #eee;
+	border-bottom: 1px solid #eee;
+	width: min(900px, 90%); /* لتصغير العرض العام */
+}
+
+.faq-heading {
+	font-family: var(--serif);
+	font-size: clamp(1.8rem, 4vw, 2.5rem);
+	text-align: center;
+	margin-bottom: 30px;
+	color: #111;
+}
+
+/* كل سؤال */
+.faq-section details {
+	border-bottom: 1px solid #ddd;
+	padding: 15px 0;
+	cursor: pointer;
+	transition: color 0.2s ease;
+}
+
+.faq-section summary {
+	font-weight: 600;
+	font-size: 1.1rem;
+	list-style: none;
+	color: #222;
+	position: relative;
+	padding-right: 25px;
+}
+
+/* السهم */
+.faq-section summary::after {
+	content: "▾"; /* السهم الصغير */
+	position: absolute;
+	right: 0;
+	top: 0;
+	font-size: 1rem;
+	color: #666;
+	transition: transform 0.3s ease;
+}
+
+/* لما يفتح السؤال */
+.faq-section details[open] summary::after {
+	transform: rotate(180deg);
+	color: #313728;
+}
+
+.faq-section details[open] summary {
+	color: #313728;
+}
+
+.faq-section p {
+	margin-top: 10px;
+	color: #555;
+	line-height: 1.6;
+	font-size: 1rem;
+	max-width: 90%; /* لتقليل عرض الفقرة داخل السؤال */
+}
